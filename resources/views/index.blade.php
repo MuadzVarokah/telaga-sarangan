@@ -61,6 +61,7 @@ i {
 
 #gambar_wahana {
     transition: transform .2s; /* Animation */
+    transition: 0.5s;
 }
 
 
@@ -119,6 +120,8 @@ i:hover {
 
 #gambar_wahana:hover {
     transform: scale(1.2);
+    margin-bottom: 3%;
+    transition: 0.5s;
 }
 
 
