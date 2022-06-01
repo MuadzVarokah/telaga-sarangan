@@ -223,13 +223,13 @@ i:hover {
             <img id="gambar_wahana"  src="{!! asset('images/sarangan_home.jpg') !!}"  class="img-fluid rounded-3" alt="Speedboat">
         </div>
         <div  class="col-md-6">
-            <p id="item_tulisan" style="color: #1D7997">Telaga Sarangan atau Telaga Pasir merupakan destinasi wisata yang unik di daerah Plaosan, Kabupaten Magetan, Jawa Timur. Seperti namanya, Telaga Sarangan merupakaan sebuah telaga yang terletak di lereng Gunung Lawu. 
+            <p id="item_tulisan" style="color: #1D7997; text-align: justify;">Telaga Sarangan atau Telaga Pasir merupakan destinasi wisata yang unik di daerah Plaosan, Kabupaten Magetan, Jawa Timur. Seperti namanya, Telaga Sarangan merupakaan sebuah telaga yang terletak di lereng Gunung Lawu. 
             Karena terletak di lereng Gunung Lawu, maka Telaga Sarangan memiliki udara yang sejuk dan suhu dingin yang cocok digunakan untuk healing, selain keunikan tersebut Telaga Sarangan menyajikan pemandangan alam yang indah dan asri khas pegunungan,
         oleh karena itu sangat cocok dijadikan spot foto yang instagramable. Di Telaga Sarangan juga terdapat wahana seperti menaiki kapal, menunggangi kuda. Selain itu juga Telaga Sarangan menawarkan oleh - oleh dan makanan ringan yang khas
     seperti lempeng, rengginang, jenang candi, sate kelinci, pecel pincuk, berbagai macam souvenir dan masih banyak lagi. Selain itu, Sarangan juga memiliki legenda sendiri yang asik untuk disimak lo, legendanya sendiri menceritakan terbentuknya Telaga Sarangan. <strong>Menurut Legenda</strong>, Telaga Sarangan berasal dari sepasang suami istri yang bernama Kyai Pasir dan Nyai Pasir, setelah bertahun-tahun hidup bersama, Kyai dan Nyai Pasir belum juga dikaruniai buah hati.</p>
         </div>
         <div class="col-md-12">
-            <p id="item_tulisan" style="color: #1D7997"> 
+            <p id="item_tulisan" style="color: #1D7997; text-align: justify;"> 
             Suatu ketika, Kyai dan Nyai Pasir bersemedi untuk memohon kepada Sang Hyang Widhi agar segera diberikan anak.
         Harapan pasangan ini pun terkabul, mereka dikaruniai seorang anak laki-laki yang diberi nama Joko Lelung. Untuk memenuhi kebutuhan sehari-hari, Kyai dan Nyai Pasir bekerja dengan bercocok tanam dan berburu.
     Pekerjaan mereka bisa dibilang cukup berat, sehingga kesehatan fisik menjadi sangat penting.
@@ -507,7 +507,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
             </div>
             <div class="col-md-6">
               <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">SPEEDBOAT</h5>
-              <p id="item_tulisan" style="color:#167594;font-size: 16px" > Pengunjung dapat menikmati serunya berkeliling telaga dengan speedboat. Kapasitas dari speedboat tersebut adalah 3 - 4 orang penumpang. Wahana speedboat ini akan memutari telaga dengan kecepatan tinggi sehingga akan memicu adrenalin pengunjung </p>
+              <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;" > Pengunjung dapat menikmati serunya berkeliling telaga dengan speedboat. Kapasitas dari speedboat tersebut adalah 3 - 4 orang penumpang. Wahana speedboat ini akan memutari telaga dengan kecepatan tinggi sehingga akan memicu adrenalin pengunjung </p>
              
               <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Harga  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
@@ -525,7 +525,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
     
             <div style="margin-top: 5%" class="col-md-6">
                 <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">WAHANA KUDA</h5>
-                <p id="item_tulisan" style="color:#167594;font-size: 16px" >Untuk pengunjung yang ingin merasakan sensasi menunggangi kuda, di Sarangan terdapat wahana Kuda dimana pada wahana tersebut pengunjung diajak mengelilingi telaga sarangan dengan menaiki kuda </p>
+                <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;" >Untuk pengunjung yang ingin merasakan sensasi menunggangi kuda, di Sarangan terdapat wahana Kuda dimana pada wahana tersebut pengunjung diajak mengelilingi telaga sarangan dengan menaiki kuda </p>
                
                 <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                   Harga  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
