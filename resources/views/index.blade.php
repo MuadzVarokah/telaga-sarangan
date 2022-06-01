@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+
+body {
+    background-color: #f5fdfd;
+}
+
 #nama_web {
     font-family:'Montserrat', sans-serif;
     
@@ -140,6 +145,24 @@ i:hover {
     transition:0.5s;
 }
 
+.card-block {
+    min-height: 300px;
+    
+}
+
+#gambar {
+    margin: 5%;
+    transition: 0.5s;
+
+}
+
+#gambar:hover{
+    transform: scale(1.4);
+    transition: 0.5s;
+    margin: 10%;
+    padding: 5%;
+
+}
 </style>
 
 <!doctype html>
@@ -152,6 +175,7 @@ i:hover {
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        
     <!-- Style -->
     <link rel="stylesheet" href="{!! asset('css/style.css') !!}">
     
@@ -161,7 +185,7 @@ i:hover {
     <link rel="stylesheet" href="{!! asset('css/ionicons.min.css') !!}">
 </head>
 
-<body data-spy="scroll" data-offset="80">
+<body data-spy="scroll" style="background-color: #ffffff" data-offset="80">
     {{-- Navbar --}}
     @include('partials.navbar')
     {{-- Navbar End --}}
@@ -176,7 +200,7 @@ i:hover {
                 <p class="iq-tw-2 iq-font-14 iq-mb-0" id="item_tulisan">dan  menyenangkan  dengan  harga  terbaik,</p>
                 <p class="iq-tw-2 iq-font-14" id="item_tulisan">cari  tempat  liburan  anda  sekarang!</p>
                 <div class="iq-ptb-30"></div>
-                <a href="#" class="btn btn-light rounded-pill iq-font-14 iq-tw-2"
+                <a href="#tentang" class="btn btn-light rounded-pill iq-font-14 iq-tw-2"
                                 style="width: 240px; color:#1D7997;">Yuk Explore!</a>
                 <div class="iq-ptb-40"></div>
             </center>
@@ -185,99 +209,182 @@ i:hover {
     {{-- Jumbotron End --}}
 
 
-    {{-- Konten Tiket --}}
-    <section id="tiket" class ="container">
+    {{-- Konten About --}}
 
-       <center>
-        <div class="row align-items-center">
-           {{-- Card info harga --}}
+<section style="padding: 5%" id="tentang" >
 
-           <div class="col-md-4">
-               
-             {{-- Start Card --}}
+    <center>
+        <h2 id="nama_web" style="color:#1D7997;margin-bottom: 3%">Telaga Sarangan</h2>
+    </center>
 
-             <div class="card rounded-3" style="width: 20rem;height: 17rem;">
-                <div class="warna card-header">
+   <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img id="gambar_wahana"  src="{!! asset('images/sarangan_home.jpg') !!}"  class="img-fluid rounded-3" alt="Speedboat">
+        </div>
+        <div  class="col-md-6">
+            <p id="item_tulisan" style="color: #1D7997">Telaga Sarangan atau Telaga Pasir merupakan destinasi wisata yang unik di daerah Plaosan, Kabupaten Magetan, Jawa Timur. Seperti namanya, Telaga Sarangan merupakaan sebuah telaga yang terletak di lereng Gunung Lawu. 
+            Karena terletak di lereng Gunung Lawu, maka Telaga Sarangan memiliki udara yang sejuk dan suhu dingin yang cocok digunakan untuk healing, selain keunikan tersebut Telaga Sarangan menyajikan pemandangan alam yang indah dan asri khas pegunungan,
+        oleh karena itu sangat cocok dijadikan spot foto yang instagramable. Di Telaga Sarangan juga terdapat wahana seperti menaiki kapal, menunggangi kuda. Selain itu juga Telaga Sarangan menawarkan oleh - oleh dan makanan ringan yang khas
+    seperti lempeng, rengginang, jenang candi, sate kelinci, pecel pincuk, berbagai macam souvenir dan masih banyak lagi. Selain itu, Sarangan juga memiliki legenda sendiri yang asik untuk disimak lo, legendanya sendiri menceritakan terbentuknya Telaga Sarangan. <strong>Menurut Legenda</strong>, Telaga Sarangan berasal dari sepasang suami istri yang bernama Kyai Pasir dan Nyai Pasir, setelah bertahun-tahun hidup bersama, Kyai dan Nyai Pasir belum juga dikaruniai buah hati.</p>
+        </div>
+        <div class="col-md-12">
+            <p id="item_tulisan" style="color: #1D7997"> 
+            Suatu ketika, Kyai dan Nyai Pasir bersemedi untuk memohon kepada Sang Hyang Widhi agar segera diberikan anak.
+        Harapan pasangan ini pun terkabul, mereka dikaruniai seorang anak laki-laki yang diberi nama Joko Lelung. Untuk memenuhi kebutuhan sehari-hari, Kyai dan Nyai Pasir bekerja dengan bercocok tanam dan berburu.
+    Pekerjaan mereka bisa dibilang cukup berat, sehingga kesehatan fisik menjadi sangat penting.
+Supaya kondisi fisik mereka selalu sehat, Kyai dan Nyai Pasir kembali bersemedi dan memohon kepada Sang Hyang Widhi, ditengah bersemdi, pasutri ini mendapat amanat bahwa keinginanya akan terkabul jika berhasil menemukan dan memakan telur yang ada di dekat ladangnya.
+Tidak lama kemudian, Nyai Pasir menemukan telur dan membawanya pulang untuk dimasak. Telur itu kemudian dibagi menjadi dua untuk dimakan bersama Kyai Pasir. Setelah memakan telur itu, Kyai Pasir kembali ke ladang, Anehnya, di tengah perjalanan, badannya terasa panas dan sangat gatal.Karena tidak kuasa menahan gatal, Kyai Pasir terus menggaruknya
+hingga terluk, singkat cerita mereka pun berubah menjadi ular naga yang sangat besar, Kyai dan Nyai Pasir yang sudah berubah menjadi ular naga, terus berguling di atas pasir hingga membentuk cekungan yang dalam dan besar. Dalam cekungan tersebut kemudian keluar air yang sangat deras dan menggenanginya.
+Menyadari kekuatan yang dimilikinya, Kyai dan Nyai Pasir berniat untuk membuat cekungan yang lebih besar untuk menenggelamkan Gunung Lawu. Joko Lelung mengetahui niat kedua orang tuanya, kemudian bersemedi memohon agar niat jahat tersebut tidak terjadi.
+Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya berhasil ditenangkan. Akan tetapi cerukan tanah yang dibuat oleh Kyai dan Nyai Pasir masih terus terisi air hingga membentuk sebuah telaga, yakni Telaga Sarangan. </p>
+        </div>
+
+ 
+
+            {{-- card --}}
+
+            <div style="margin-bottom: 2%" class="row overflow-hidden">
+                <div class="col-sm-4 ">
+                    <img id="gambar"  src="{!! asset('images/pemandangan1.jpg') !!}" width="300" class="img-fluid rounded-3" alt="...">
+                </div>
+                <div class="col-sm-4 scroll">
+                    <img id="gambar"  src="{!! asset('images/pemandangan2.jpg') !!}" width="300" class="img-fluid rounded-3" alt="...">
+
+                </div>
+                <div class="col-sm-4">
+                    <img id="gambar"  src="{!! asset('images/pemandangan3.jpg') !!}" width="300" class="img-fluid rounded-3" alt="...">
+
                 </div>
 
-                <div class="ca card-header" >
-                    <i class="fas fa-ticket-alt fa-7x"></i>
-                    </div>
+                <div class="col-sm-4">
+                    <img id="gambar"  src="{!! asset('images/pemandangan4.jpg') !!}" width="300" class="img-fluid rounded-3" alt="...">
 
-                <div class="card-body">
-                    <p id="tittle_card" class="card-tittle">Harga Tiket Masuk</p>
-                    <div class="row align-items-center">
-                        {{-- Start --}}
-
-                        <div class="col">
-                            <p id="isi_cards" class="card-text"> Hari biasa: </p>
-                            <p id="isi_cardss" class="card-text"> Rp.20.000 </p>
-                          </div>
-                          <div class="col">
-                            <p id="isi_cards" class="card-text"> Hari libur: </p>
-                            <p id="isi_cardss" class="card-text"> Rp.30.000 </p>
-                            </div>
-
-                        {{-- end --}}
-                    </div>
-                </div>
-              </div>
-
-            {{-- End Card --}}
-            
-        
-            </div>
-
-           {{-- end card --}}
-            <div class="col-md-4">
-                {{-- Start Card --}}
-
-                <div class="card rounded-3" style="width: 20rem;height: 17rem;">
-                    <div class="warna card-header">
-                    </div>
-
-                    <div class="ca card-header" >
-                        <i class="	fas fa-check-circle fa-6x"></i>
-                        </div>
-
-                    <div style="margin-top: 5%" class="card-body">
-                        <p id="tittle_card" class="card-tittle">Status Tiket Masuk</p>
-                        <p id="isi_cardss" class="card-text"> Tersedia </p>
-                    </div>
                   </div>
 
-                {{-- End Card --}}
-            </div>
-            <div class="col-md-4">
-             {{-- Start Card --}}
+                  <div class="col-sm-4">
+                    <img id="gambar"  src="{!! asset('images/pemandangan5.jpg') !!}" width="300" class="img-fluid rounded-3" alt="...">
 
-             <div class="card rounded-3" style="width: 20rem;height: 17rem;">
-                <div class="warna card-header">
-                </div>
+                  </div>
 
-                <div class="ca card-header" >
-                    <i class="fas fa-edit fa-6x"></i>
+                  <div class="col-sm-4">
+                    <img id="gambar"  src="{!! asset('images/pemandangan6.jpg') !!}" width="300" class="img-fluid rounded-3" alt="...">
+
+                  </div>
+              </div>
+           
+
+            {{-- end card --}}
+
+   
+
+      </div>
+   </div>
+
+</section>
+
+{{-- End Konten About --}}
+
+
+
+    {{-- Konten Tiket --}}
+    <section id="tiket" style="background-color: #f5fdfd;padding-top: 2%;padding-bottom: 2%" >
+
+       <div class="container">
+        <center>
+
+            <h2 id="nama_web" style="color: #1D7997;margin-bottom: 3%">Tiket Masuk</h2>
+            <div class="row align-items-center">
+               {{-- Card info harga --}}
+    
+               <div class="col-md-4">
+                   
+                 {{-- Start Card --}}
+    
+                 <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                    <div class="warna card-header">
                     </div>
-
-                <div style="margin-top: 5%" class="card-body">
-                    <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
-                    <button type="button" style=" padding-left: 10%;padding-right: 10%;" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#modalPesan">
-                        Pesan
-                      </button>
+    
+                    <div class="ca card-header" >
+                        <i class="fas fa-ticket-alt fa-7x"></i>
+                        </div>
+    
+                    <div class="card-body">
+                        <p id="tittle_card" class="card-tittle">Harga Tiket Masuk</p>
+                        <div class="row align-items-center">
+                            {{-- Start --}}
+    
+                            <div class="col">
+                                <p id="isi_cards" class="card-text"> Dewasa: </p>
+                                <p id="isi_cardss" class="card-text"> Rp.20.000 </p>
+                              </div>
+                              <div class="col">
+                                <p id="isi_cards" class="card-text"> Anak - Anak: </p>
+                                <p id="isi_cardss" class="card-text"> Rp.10.000 </p>
+                                </div>
+    
+                            {{-- end --}}
+                        </div>
+                    </div>
+                  </div>
+    
+                {{-- End Card --}}
+                
+            
+                </div>
+    
+               {{-- end card --}}
+                <div class="col-md-4">
+                    {{-- Start Card --}}
+    
+                    <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                        <div class="warna card-header">
+                        </div>
+    
+                        <div class="ca card-header" >
+                            <i class="	fas fa-check-circle fa-6x"></i>
+                            </div>
+    
+                        <div style="margin-top: 5%" class="card-body">
+                            <p id="tittle_card" class="card-tittle">Status Tiket Masuk</p>
+                            <p id="isi_cardss" class="card-text"> Tersedia </p>
+                        </div>
+                      </div>
+    
+                    {{-- End Card --}}
+                </div>
+                <div class="col-md-4">
+                 {{-- Start Card --}}
+    
+                 <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                    <div class="warna card-header">
+                    </div>
+    
+                    <div class="ca card-header" >
+                        <i class="fas fa-edit fa-6x"></i>
+                        </div>
+    
+                    <div style="margin-top: 5%" class="card-body">
+                        <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
+                        <button type="button" style=" padding-left: 10%;padding-right: 10%;" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#modalPesan">
+                            Pesan
+                          </button>
+                    </div>
+                  </div>
+    
+                {{-- End Card --}}
                 </div>
               </div>
-
-            {{-- End Card --}}
-            </div>
-          </div>
-       </center>
+           </center>
+       </div>
 
     </section>
 {{-- end konten tiket --}}
 
+
 {{-- Konten UMKM --}}
 
-<section id="umkm"  style="background-color: #f5fdfd">
+<section id="umkm">
 
     {{-- Column --}}
 
@@ -286,7 +393,7 @@ i:hover {
         <center>
 
             <h2 id="nama_web"  style="color:#167594; padding-top: 5%;margin-bottom: 2%">UMKM</h2>
-            <p style="color:#167594;margin-bottom: 3%;" id="item_tulisan">Usaha Kecil dan Menengah (UKM) mempunyai peran yang strategis dalam pembangunan ekonomi warga sarangan, oleh karena selain berperan dalam pertumbuhan ekonomi dan penyerapan tenaga kerja juga berperan dalam pendistribusian hasil-hasil pembangunan.</p>
+            <p style="color:#167594;margin-bottom: 3%;" id="item_tulisan">Usaha Menengah Kecil Micro (UMKM) mempunyai peran yang strategis dalam pembangunan ekonomi warga sarangan, oleh karena selain berperan dalam pertumbuhan ekonomi dan penyerapan tenaga kerja juga berperan dalam pendistribusian hasil-hasil pembangunan.</p>
 
             <div class="row align-items-start">
                 <div class="col-md-4">
@@ -385,66 +492,77 @@ i:hover {
 
 {{-- Start Konten Wahana --}}
 
-<section style="margin-bottom: 2%" id="wahana" class="container">
+<section style="margin-bottom: 2%;background-color: #f5fdfd"  id="wahana">
 
-<center>
-    <h2 id="nama_web"  style="color:#167594; padding-top: 5%">INFORMASI</h2>
-    <h2 id="nama_web"  style="color:#167594; margin-bottom: 5%">WAHANA</h2>
-</center>
-
-    <div class="row align-items-start">
-        {{-- start wahana --}}
-        <div class="col-md-6">
-            <img id="gambar_wahana"  src="{!! asset('images/wahana_sepeedboat.png') !!}" class="img-fluid" alt="Speedboat">
-        </div>
-        <div class="col-md-6">
-          <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">SPEEDBOAT</h5>
-          <p id="item_tulisan" style="color:#167594;font-size: 16px" > Pengunjung dapat menikmati serunya berkeliling telaga dengan speedboat. Kapasitas dari speedboat tersebut adalah 3 - 4 orang penumpang. Wahana speedboat ini akan memutari telaga dengan kecepatan tinggi sehingga akan memicu adrenalin pengunjung </p>
-         
-          <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Harga  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-          </button>
-          
-          <button type="button" class="btn btn-secondary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Jam Buka  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-          </button>
-        </div>
-
-        {{-- End wahana --}}
-        
-
-        {{-- Start wahana 2 --}}
-
-        <div style="margin-top: 5%" class="col-md-6">
-            <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">WAHANA KUDA</h5>
-            <p id="item_tulisan" style="color:#167594;font-size: 16px" >Untuk pengunjung yang ingin merasakan sensasi menunggangi kuda, di Sarangan terdapat wahana Kuda dimana pada wahana tersebut pengunjung diajak mengelilingi telaga sarangan dengan menaiki kuda </p>
-           
-            <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Harga  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-            </button>
+<div class="container">
+    <center>
+        <h2 id="nama_web"  style="color:#167594; padding-top: 5%">INFORMASI</h2>
+        <h2 id="nama_web"  style="color:#167594; margin-bottom: 5%">WAHANA</h2>
+    </center>
+    
+        <div class="row align-items-start">
+            {{-- start wahana --}}
+            <div class="col-md-6">
+                <img id="gambar_wahana"  src="{!! asset('images/wahana_sepeedboat.png') !!}" class="img-fluid" alt="Speedboat">
+            </div>
+            <div class="col-md-6">
+              <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">SPEEDBOAT</h5>
+              <p id="item_tulisan" style="color:#167594;font-size: 16px" > Pengunjung dapat menikmati serunya berkeliling telaga dengan speedboat. Kapasitas dari speedboat tersebut adalah 3 - 4 orang penumpang. Wahana speedboat ini akan memutari telaga dengan kecepatan tinggi sehingga akan memicu adrenalin pengunjung </p>
+             
+              <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Harga  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
+              </button>
+              
+              <button type="button" class="btn btn-secondary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Jam Buka  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
+              </button>
+            </div>
+    
+            {{-- End wahana --}}
             
-            <button type="button" class="btn btn-secondary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Jam Buka  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-            </button>
+    
+            {{-- Start wahana 2 --}}
+    
+            <div style="margin-top: 5%" class="col-md-6">
+                <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">WAHANA KUDA</h5>
+                <p id="item_tulisan" style="color:#167594;font-size: 16px" >Untuk pengunjung yang ingin merasakan sensasi menunggangi kuda, di Sarangan terdapat wahana Kuda dimana pada wahana tersebut pengunjung diajak mengelilingi telaga sarangan dengan menaiki kuda </p>
+               
+                <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Harga  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
+                </button>
+                
+                <button type="button" class="btn btn-secondary rounded-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Jam Buka  <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
+                </button>
+              </div>
+    
+              <div style="margin-top: 5%" class="col-md-6">
+                <img id="gambar_wahana" src="{!! asset('images/wahana_kuda.png') !!}" class="img-fluid" alt="Speedboat">
+            </div>
+    
+            {{-- End Wahana 2 --}}
+    
+            
+           
           </div>
-
-          <div style="margin-top: 5%" class="col-md-6">
-            <img id="gambar_wahana" src="{!! asset('images/wahana_kuda.png') !!}" class="img-fluid" alt="Speedboat">
-        </div>
-
-        {{-- End Wahana 2 --}}
-
-        
-       
-      </div>
+</div>
 
 </section>
 
 <footer style="background-color:rgba(3, 15, 29, 0.9);padding: 1%" >
 
     <div class="container">
+<div class="row align-item-start">
+    <div class="col-md-6">
 
-        <h4 style="color: #FFF">Footer nya diisi apa ya ?</h4>
+    </div>
+
+    <div class="col-md-6">
+        <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Lokasi Telaga Sarangan</h6>
+        <iframe style="margin-bottom: 3%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15816.22055288366!2d111.20902322421088!3d-7.677221761446002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e798e9941fbceb1%3A0x49bf06f3bb4505db!2sTelaga%20Sarangan!5e0!3m2!1sid!2sid!4v1654059780643!5m2!1sid!2sid" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+</div>
 
     </div>
 
