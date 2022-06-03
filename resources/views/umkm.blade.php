@@ -188,7 +188,7 @@ i:hover {
         @foreach ($data as $data)
         {{--
         <?php if ($data != null) {?> --}}
-        <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex border-0"style=" padding-left:1%; padding-right:1%; min-width:25%; max-width: 50%; max-height:100%">
+        <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex border-0"style=" margin-left:5%; margin-right:3%; padding-left:1%; padding-right:1%; min-width:20%; max-width: 40%; max-height:100%">
           <a href="{{ url('umkm/') }}/#" style="text-decoration: none">
             <div class="iq-blog text-left iq-ptb-30 d-flex  ">
               <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
