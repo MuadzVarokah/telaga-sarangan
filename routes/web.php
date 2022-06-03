@@ -22,8 +22,11 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
+Route::post('/registrasi', [DashboardController::class, 'registrasi']);
 
 Route::get('/umkm/{id}', 'App\Http\Controllers\UmkmController@data');
+
+
 // Route::get('/post', 'PostController@index');
 
 // Route::get('/umkm', function () {
