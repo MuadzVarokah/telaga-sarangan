@@ -10,7 +10,12 @@ use App\Post;
     class UmkmController extends Controller
     {
         public function index(){
-            $post   = Post::all();
-            return view('umkm')->with('post', $post);
+            
+        }
+
+        public function data($id){
+            $data = DB::table('umkm')->where("id_kat",$id)->get();
+            $group = DB::table('kat_umkm')->where("id_kat_umkm",$id)->first();
+            return view('umkm', compact('data','group'));
         }
     }

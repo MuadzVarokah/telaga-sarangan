@@ -107,9 +107,9 @@ i {
     transition:0.5s;
 }
 
-.card:hover {
+/* .card:hover {
     transform: scale(1.2);
-}
+} */
 
 i:hover {
     color: #0a4255;
@@ -168,8 +168,9 @@ i:hover {
         background-size: cover; background-position: center center; background-repeat: no-repeat;">
         <div class="container">
             <center style="letter-spacing: 1px;">
-                <h2 class="iq-tw-6 iq-pt-100" id="nama_webs" style="color: white"><p>UMKM</p>OLEH-OLEH</h2>
-                <p class="lead iq-tw-2 iq-font-14 iq-pt-30" id="item_tulisan">Temukan informasi oleh - oleh khas Sarangan  yang unik, enak dan memukau untuk kerabat anda di rumah</p>
+                <h2 class="iq-tw-6 iq-pt-100" id="nama_webs" style="color: white"><p>UMKM</p>{{$group->nama}}</h2>
+                <!-- <p class="lead iq-tw-2 iq-font-14 iq-pt-30" id="item_tulisan">Yuk temukan informasi buah, sayuran segar yang langsung dipetik dari perkebunanan atau persawahan</p> -->
+                <p class="lead iq-tw-2 iq-font-14 iq-pt-30" id="item_tulisan">{{$group->nama}} terbaik dari Telaga Sarangan</p>
                 <div class="iq-ptb-30"></div>
                 <div class="iq-ptb-40"></div>
             </center>
@@ -183,52 +184,55 @@ i:hover {
     {{-- Column --}}
 
     <div class="container">
-       
-        <center>
-            <p></p>
-            <div class="row align-items-start">
-                <div class="col-md-3">              
+      <div class="row justify-content-md-center">
+        @foreach ($data as $data)
+        {{--
+        <?php if ($data != null) {?> --}}
+        <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex border-0"style=" padding-left:1%; padding-right:1%; min-width:25%; max-width: 50%; max-height:100%">
+          <a href="{{ url('umkm/') }}/#" style="text-decoration: none">
+            <div class="iq-blog text-left iq-ptb-30 d-flex  ">
+              <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
+                @php
+                $foto = $data->gambar;
+                if ($data->gambar == null) $foto = 'notfound.jpg';
+                @endphp
+                <div class="card m-auto justify-content-center bg-transparent border-0" 
+                style="
+                                background: url({!! asset('images/' . $foto . '') !!});
+                                background-size:cover;
+                                background-position: center;
+                                padding-top:30%; 
+                                width:auto; 
+                                min-width:100%;
+                                max-width: 150%; 
+                                min-height:100%;
+                                max-height:150%;
+                                max-width: 150px;
+                                min-width: 100px;
+                                max-height:150px;
+                                min-height: 100px; 
 
-                    {{-- start --}}
-                    <a style="text-decoration: none;" href="#">
-
-                        <div class="card rounded-3" style="width: 16rem; height: 20rem; padding: 10%">
-                        {{-- Konten UMKM --}}
-
-<section id="umkm"  style="background-color: #f5fdfd">
-
-    {{-- Column --}}
-
-    <div class="container">
-       
-        <center>
-            <p></p>
-            <div class="row align-items-start">
-                <div class="col-md-3">              
-
-                    {{-- start --}}
-                    <a style="text-decoration: none;" href="#">
-
-                        <div class="card rounded-3" style="width: 16rem; height: 20rem; padding: 10%">
-                            <img src="{!! asset('images/ image 4.png') !!}" class="card-img-top" alt="UMKM Oleh2">
-                            <div class="card-body">
-                            @foreach ($post as $item)
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $item->title }}</h5>
-                                <p class="card-text">{{ substr($item->content, 0, 100) }}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                    @endforeach 
- 
-        </center>
-
+                              ">
+                </div>
+                <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; margin-left:10%; margin-right:10%;">{{$data->barang}}</h5> <br>
+                
+                <p class='text-center m-auto' style="font-size: 75%;">{{$data->keterangan}}
+                <p class='text-center' style=" font-size: 75%;">Harga: {{$data->harga_terendah}} - {{$data->harga_tertinggi}}</p>
+                
+              </div>
+            </div>
+          </a>
         </div>
+        {{--
+        <?php } else { ?>
+        <h5>Data tidak ditemukan</h5>
+        <?php } ?> --}}
+        @endforeach
+        <!---->
+      </div>
 
 </section>
+
 
 </body>
 

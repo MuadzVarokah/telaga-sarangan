@@ -399,7 +399,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
                 <div class="col-md-4">
 
                     {{-- start --}}
-                    <a style="text-decoration: none;" href="umkmoleh">
+                    <a style="text-decoration: none;" href="umkm/1">
 
                         <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
                             <img src="{!! asset('images/umkm_oleh.png') !!}" class="card-img-top" alt="UMKM Oleh2">
@@ -413,7 +413,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
                 </div>
                 <div class="col-md-4">
                 {{-- start --}}
-                    <a style="text-decoration: none;" href="sayuran">
+                    <a style="text-decoration: none;" href="umkm/2">
 
                         <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
                             <img src="{!! asset('images/umkm_sayur.png') !!}" class="card-img-top" alt="UMKM Sayur">
@@ -426,7 +426,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
                 </div>
                 <div class="col-md-4">
                    {{-- start --}}
-                   <a style="text-decoration: none;" href="kuliner">
+                   <a style="text-decoration: none;" href="umkm/3">
 
                     <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
                         <img src="{!! asset('images/umkm_kuliner.png') !!}" class="card-img-top" alt="UMKM Kuliner">
@@ -439,7 +439,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
                 </div>
                  <div class="col-md-4">
                    {{-- start --}}
-                   <a style="text-decoration: none;" href="fashion">
+                   <a style="text-decoration: none;" href="umkm/4">
 
                     <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
                         <img src="{!! asset('images/umkm_fashion.png') !!}" class="card-img-top" alt="UMKM Fashion">
@@ -453,7 +453,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
 
                 <div class="col-md-4">
                     {{-- start --}}
-                    <a style="text-decoration: none;" href="cenderamata">
+                    <a style="text-decoration: none;" href="umkm/5">
  
                      <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
                          <img src="{!! asset('images/umkm_cendra.png') !!}" class="card-img-top" alt="UMKM Cendramata">
@@ -468,7 +468,7 @@ Permintaan Joko Lelung pun diterima oleh Sang Hyang Widhi dan kedua orang tuanya
 
                  <div class="col-md-4">
                     {{-- start --}}
-                    <a style="text-decoration: none;" href="tanaman">
+                    <a style="text-decoration: none;" href="umkm/6">
  
                      <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
                          <img src="{!! asset('images/umkm_tanaman.png') !!}" class="card-img-top" alt="UMKM Tanaman">

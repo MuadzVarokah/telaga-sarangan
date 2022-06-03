@@ -22,27 +22,29 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
+
+Route::get('/umkm/{id}', 'App\Http\Controllers\UmkmController@data');
 // Route::get('/post', 'PostController@index');
 
 // Route::get('/umkm', function () {
 //     return view('/umkm');
 // });
 
-Route::get('/umkmoleh', function () {
-    return view('/umkmoleh');
-});
+// Route::get('/umkmoleh', function () {
+//     return view('/umkmoleh');
+// });
 
-Route::get('/sayuran', function () {
-    return view('/sayuran');
-});
+// Route::get('/sayuran', function () {
+//     return view('/sayuran');
+// });
 
-Route::get('/kuliner', function () {
-    return view('/kuliner');
-});
+// Route::get('/kuliner', function () {
+//     return view('/kuliner');
+// });
 
-Route::get('/fashion', function () {
-    return view('/fashion');
-});
+// Route::get('/fashion', function () {
+//     return view('/fashion');
+// });
 
 // Route::get('/cenderamata', function () {
 //     return view('/cenderamata');
