@@ -189,7 +189,7 @@ i:hover {
         {{--
         <?php if ($data != null) {?> --}}
         <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex border-0"style=" margin-left:5%; margin-right:3%; padding-left:1%; padding-right:1%; min-width:20%; max-width: 40%; max-height:100%">
-          <a href="{{ url('umkm/') }}/#" style="text-decoration: none">
+          <!-- <a href="{{ url('umkm/') }}/#" style="text-decoration: none"> -->
             <div class="iq-blog text-left iq-ptb-30 d-flex  ">
               <div class="m-auto justify-content-center align-items-center" style="width: 100%; min-height:250px; height:100%; max-height:800px">
                 @php
@@ -201,7 +201,7 @@ i:hover {
                                 background: url({!! asset('images/' . $foto . '') !!});
                                 background-size:cover;
                                 background-position: center;
-                                padding-top:30%; 
+                                padding-top:30%;
                                 width:auto; 
                                 min-width:100%;
                                 max-width: 150%; 
@@ -214,14 +214,17 @@ i:hover {
 
                               ">
                 </div>
-                <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; margin-left:10%; margin-right:10%;">{{$data->barang}}</h5> <br>
-                
-                <p class='text-center m-auto' style="font-size: 75%;">{{$data->keterangan}}
-                <p class='text-center' style=" font-size: 75%;">Harga: {{$data->harga_terendah}} - {{$data->harga_tertinggi}}</p>
+                <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; padding-top:5%; margin-left:10%; margin-right:10%;">{{$data->barang}}</h5> <br>
+                @php
+                $total = ($data->harga_tertinggi) + ($data->harga_terendah);
+                $rata = $total/2;
+                @endphp
+                <p class='text-center' style="font-size: 75%;">{{$data->keterangan}}
+                <p class='text-center' style=" font-size: 75%;">Harga: {{$data->harga_terendah}} - {{$data->harga_tertinggi}} <br> Harga rata-rata: {{$rata}}</p>
                 
               </div>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
         {{--
         <?php } else { ?>
