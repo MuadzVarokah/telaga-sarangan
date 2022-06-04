@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TiketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,11 @@ Route::get('/', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Route::post('/registrasi', [DashboardController::class, 'registrasi']);
+
+// Pesan
+Route::post('/pesan', [TiketController::class, 'pesan']);
+// Route::post('/pesan', 'App\Http\Controllers\TiketController@pesan');
+
 
 Route::get('/umkm/{id}', 'App\Http\Controllers\UmkmController@data');
 
