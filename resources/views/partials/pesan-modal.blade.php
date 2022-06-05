@@ -8,9 +8,10 @@
             <div class="modal-body">
 
                 <form action="/pesan" method="POST">
-
-                    <input type="hidden" name="id_tiket" value="" class="form-control">
-                    <input type="hidden" name="id_user" value="" class="form-control">
+                    @csrf
+                    {{-- <input type="hidden" name="id_tiket" value=null> --}}
+                    <input type="hidden" name="id_user" value="1">
+                    <input type="hidden" name="harga_tiket" value="1">
                     <div class="mb-3">
                         <label class="form-label">Tanggal Pemesanan</label>
                         <input type="date" name="waktu_kunjungan" class="form-control">
@@ -28,10 +29,12 @@
                             <option value="Ovo">Ovo</option>
                         </select>
                     </div>
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label class="form-label">Harga Tiket</label>
                         <input type="text" name="harga_tiket" class="form-control">
-                    </div>
+                    </div> --}}
+
+                    <input name="waktu_beli" type="hidden" value="<?php echo date('Y-m-d h:i:s'); ?>">
                     
                     <button type="submit" class="btn btn-primary">Pesan</button>
                 </form>

@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Tiket;
-    
+use Symfony\Contracts\Service\Attribute\Required;
+
 class TiketController extends Controller
     {
         public function index(){
@@ -15,8 +16,7 @@ class TiketController extends Controller
 
         public function pesan(Request $request)
         {
-            $this->validate($request, [
-                'id_tiket' => 'required',
+            $validatedData = $request->validate([
                 'harga_tiket' => 'required',
                 'id_user' => 'required',
                 'waktu_kunjungan' => 'required',
@@ -24,15 +24,17 @@ class TiketController extends Controller
                 'waktu_beli' => 'required'
             ]);
 
-            $tiket = Tiket::create([
-                'id_tiket' => null,
-                'id_user' => null,
-                'waktu_kunjungan' => $request->waktu_kunjungan,
-                'jumlah_tiket' => $request->jumlah_tiket,
-                'waktu_beli' => null,
-                'harga_tiket' => null,
-            ]);
-            return redirect('index')->with(['success' => 'Pemesanan Berhasil']);
+            // $harga_tiket = 1;
+            // $hari = date('D', strtotime($request->waktu_kunjungan));
+            // if($hari == ('Sat' || 'Sun')) {
+            //     $harga_tiket = 2;
+            // };
+
+            Tiket::create($validatedData);
+
+            $request->session()->flash('success', 'Tiket berhasil dipilih, silahkan lanjutkan pembayaran!');
+
+            return view('index');
 
         }
     }
