@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="pesanModalLabel">PESAN TIKET<br> TELAGA SARANGAN</h5>
+                <h5 class="modal-title" id="pesanModalLabel">PESAN TIKET<br> <b>GO TELAGA SARANGAN<b></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -35,8 +35,9 @@
                     </div> --}}
 
                     <input name="waktu_beli" type="hidden" value="<?php echo date('Y-m-d h:i:s'); ?>">
-                    
+                    <center>
                     <button type="submit" class="btn btn-primary">Pesan</button>
+                    </center>
                 </form>
             </div>
         </div>
