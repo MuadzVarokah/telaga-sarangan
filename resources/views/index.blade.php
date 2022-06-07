@@ -163,7 +163,6 @@
         padding: 5%;
 
     }
-
 </style>
 
 <!doctype html>
@@ -391,11 +390,11 @@
                                 <p id="isi_cardss" class="card-text"> Tersedia </p>
                             </div>
                             <div>
-                            <button type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                <button type="button" style=" padding-left: 10%;padding-right: 10%;"
                                     class="btn btn-primary rounded-pill" data-bs-toggle="modal"
                                     data-bs-target="#RiwayatModal">
                                     Cek Riwayat
-                            </button>
+                                </button>
                             </div>
                         </div>
 
@@ -623,11 +622,14 @@
             <div class="row align-item-start">
                 <div class="col-md-6">
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Informasi Telaga Sarangan</h6>
-                    <p> Jalan Raya Telaga Sarangan, Sarangan, Plaosan, Telaga Pasir, Sarangan, Plaosan, Kabupaten Magetan, Jawa Timur 63361.</p>
-                    <p><i style="color: white;margin-left: 10px" class="fa fa-phone"></i><a></a>  +628123456xx</p>
-                    <p href="https://www.instagram.com/gotelagasarangan/"><i style="color: white;margin-left: 10px" class="fa fa-instagram"></i>  @gotelagasarangan_</p>
-                    <p><i style="color: white;margin-left: 10px" class="fa fa-envelope"></i>  gotelagasarangan@gmail.com</p>
-                    <p><i style="color: white;margin-left: 10px" class="fa fa-facebook"></i>  gotelagasarangan</p>
+                    <p> Jalan Raya Telaga Sarangan, Sarangan, Plaosan, Telaga Pasir, Sarangan, Plaosan, Kabupaten
+                        Magetan, Jawa Timur 63361.</p>
+                    <p><i style="color: white;margin-left: 10px" class="fa fa-phone"></i><a></a> +628123456xx</p>
+                    <p href="https://www.instagram.com/gotelagasarangan/"><i style="color: white;margin-left: 10px"
+                            class="fa fa-instagram"></i> @gotelagasarangan_</p>
+                    <p><i style="color: white;margin-left: 10px" class="fa fa-envelope"></i> gotelagasarangan@gmail.com
+                    </p>
+                    <p><i style="color: white;margin-left: 10px" class="fa fa-facebook"></i> gotelagasarangan</p>
                 </div>
                 <!-- <div class="col-md-6">
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Contact Us</h6>
@@ -651,7 +653,7 @@
             </div>
         </div>
         <center>
-        <div class="row iq-mt-10">
+            <div class="row iq-mt-10">
                 <div class="mx-auto">
                     <div class="iq-copyright ">
                         Copyright @
@@ -661,8 +663,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-</center>
+            </div>
+        </center>
 
 
     </footer>
