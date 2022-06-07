@@ -7,12 +7,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Tiket;
+
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $riwayat = Tiket::where('id_user',1)->get();
+        return view('index',compact('riwayat'));
     }
 
     public function registrasi(Request $request)

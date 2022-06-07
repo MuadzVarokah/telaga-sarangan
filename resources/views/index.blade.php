@@ -390,6 +390,13 @@
                                 <p id="tittle_card" class="card-tittle">Status Tiket Masuk</p>
                                 <p id="isi_cardss" class="card-text"> Tersedia </p>
                             </div>
+                            <div>
+                            <button type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                    data-bs-target="#RiwayatModal">
+                                    Cek Riwayat
+                            </button>
+                            </div>
                         </div>
 
                         {{-- End Card --}}
@@ -673,6 +680,10 @@
     {{-- Pesan modal --}}
     @include('partials.pesan-modal')
     {{-- Pesan modal End --}}
+
+    {{-- Riwayat modal --}}
+    @include('partials.riwayat-modal')
+    {{-- Riwayat modal End --}}
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
