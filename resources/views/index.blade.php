@@ -559,56 +559,53 @@
             </center>
 
             <div class="row align-items-start">
+            @foreach($wahana as $wahana)
+            @php
+                $count = 0;
+                $count ++;
+            @endphp
+            {{-- <?php if ($count % 2 == 0) {?> --}}
                 {{-- start wahana --}}
-                <div class="col-md-6">
-                    <img id="gambar_wahana" src="{!! asset('images/wahana_sepeedboat.png') !!}" class="img-fluid" alt="Speedboat">
+                
+                
+                <div class="col-md-6" style="margin-top: 5%">
+                    <img id="gambar_wahana" style='height:300px; max-width:450px' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
                 </div>
-                <div class="col-md-6">
-                    <h5 id="nama_web" style="color:#167594; margin-bottom: 5%">SPEEDBOAT</h5>
-                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> Pengunjung dapat
-                        menikmati serunya berkeliling telaga dengan speedboat. Kapasitas dari speedboat tersebut adalah
-                        3 - 4 orang penumpang. Wahana speedboat ini akan memutari telaga dengan kecepatan tinggi
-                        sehingga akan memicu adrenalin pengunjung </p>
-
-                    <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Harga <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-                    </button>
-
-                    <button type="button" class="btn btn-secondary rounded-3" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Jam Buka <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-                    </button>
+                <div class="col-md-6" style="margin-top: 5%">
+                    <h5 id="nama_web" style="color:#167594; margin-bottom: 5%">{{$wahana->nama}}</h5>
+                    
+                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> {{$wahana->deskripsi}} </p>
+                    @php
+                        $cost2 = '';
+                        if ($wahana->nama_harga2 != null) $cost2 = $wahana->nama_harga2 .": Rp. ". $wahana->harga2 .".000";
+                    @endphp
+                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> {{$wahana->nama_harga}} : Rp. {{$wahana->harga}}.000 
+                                                                                                <br> {{$cost2}} </p>  
                 </div>
 
                 {{-- End wahana --}}
 
-
-                {{-- Start wahana 2 --}}
-
+                {{-- 
+                <?php } else { ?>--}}
+                
+                <!-- {{--start wahana2--}}
                 <div style="margin-top: 5%" class="col-md-6">
-                    <h5 id="nama_web" style="color:#167594; margin-bottom: 5%">WAHANA KUDA</h5>
-                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;">Untuk pengunjung
-                        yang ingin merasakan sensasi menunggangi kuda, di Sarangan terdapat wahana Kuda dimana pada
-                        wahana tersebut pengunjung diajak mengelilingi telaga sarangan dengan menaiki kuda </p>
-
-                    <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Harga <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-                    </button>
-
-                    <button type="button" class="btn btn-secondary rounded-3" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
-                        Jam Buka <i style="color: white;margin-left: 10px" class="fa fa-info"></i>
-                    </button>
+                    <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">{{$wahana->nama}}</h5>
+                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;">{{$wahana->deskripsi}} </p>
+                    @php
+                        $cost2 = '';
+                        if ($wahana->nama_harga2 != null) $cost2 = $wahana->nama_harga2 .": Rp. ". $wahana->harga2 .".000";
+                    @endphp
+                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> {{$wahana->nama_harga}} : Rp. {{$wahana->harga}}.000
+                                                                                                        <br> {{$cost2}} </p>  
                 </div>
 
                 <div style="margin-top: 5%" class="col-md-6">
-                    <img id="gambar_wahana" src="{!! asset('images/wahana_kuda.png') !!}" class="img-fluid" alt="Speedboat">
+                    <img id="gambar_wahana" style='height:300px; max-width:450px' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
                 </div>
-
-                {{-- End Wahana 2 --}}
-
+                {{--end wahana2--}} -->
+                {{-- <?php ; } ?> --}}
+            @endforeach
 
 
             </div>

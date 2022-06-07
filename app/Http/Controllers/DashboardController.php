@@ -15,7 +15,15 @@ class DashboardController extends Controller
     public function index()
     {
         $riwayat = Tiket::where('id_user',1)->get();
-        return view('index',compact('riwayat'));
+        $wahana = DB::table('wahana')
+        ->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
+        ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')
+        ->distinct()
+        ->get();
+        $wahana = $wahana->unique('deskripsi');
+        //$wahana = array_slice($wahana->values()->all(), 0, 5, true);
+        //dd($wahana);
+        return view('index',compact('riwayat','wahana'));
     }
 
     public function registrasi(Request $request)
