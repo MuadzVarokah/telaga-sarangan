@@ -615,8 +615,23 @@
         <div class="container">
             <div class="row align-item-start">
                 <div class="col-md-6">
-
+                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Informasi Telaga Sarangan</h6>
+                    <p> Jalan Raya Telaga Sarangan, Sarangan, Plaosan, Telaga Pasir, Sarangan, Plaosan, Kabupaten Magetan, Jawa Timur 63361.</p>
+                    <p><i style="color: white;margin-left: 10px" class="fa fa-phone"></i><a></a>  +628123456xx</p>
+                    <p href="https://www.instagram.com/gotelagasarangan/"><i style="color: white;margin-left: 10px" class="fa fa-instagram"></i>  @gotelagasarangan_</p>
+                    <p><i style="color: white;margin-left: 10px" class="fa fa-envelope"></i>  gotelagasarangan@gmail.com</p>
+                    <p><i style="color: white;margin-left: 10px" class="fa fa-facebook"></i>  gotelagasarangan</p>
                 </div>
+                <!-- <div class="col-md-6">
+                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Contact Us</h6>
+                    <div class="row">
+                    <i style="color: white;margin-left: 10px" class="fa fa-phone"> +628123456xx</i>
+                    <p></p>
+                    <i style="color: white;margin-left: 10px" class="fa fa-instagram"> @gotelagasarangan_</i>
+                    <p></p>
+                    <i style="color: white;margin-left: 10px" class="fa fa-envelope"> gotelagasarangan@gmail.com</i>
+                </div>
+                 -->
 
                 <div class="col-md-6">
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Lokasi Telaga Sarangan</h6>
@@ -627,8 +642,20 @@
 
                 </div>
             </div>
-
         </div>
+        <center>
+        <div class="row iq-mt-10">
+                <div class="mx-auto">
+                    <div class="iq-copyright ">
+                        Copyright @
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> AMONIR All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+</center>
 
 
     </footer>
