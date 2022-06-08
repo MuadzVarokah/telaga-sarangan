@@ -40,10 +40,10 @@ class DashboardController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
+        User::create($validatedData);
 
+        $request->session()->flash('success', 'Registrasi berhasil');
 
-        // $request->session()->flash('success', 'Registrasi berhasil');
-
-        return redirect()->back()->with('success', 'Registrasi berhasil');
+        return redirect('/');
     }
 }

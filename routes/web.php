@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TiketController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,14 @@ use App\Http\Controllers\TiketController;
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
+// Registrasi
 Route::post('/registrasi', [DashboardController::class, 'registrasi']);
+
+// Login
+Route::post('/login', [LoginController::class, 'index'])/*->middleware('guest')*/;
+
+// Logout
+Route::post('/logout', [LoginController::class, 'logout']);
 
 // Pesan
 Route::post('/pesan', [TiketController::class, 'pesan']);

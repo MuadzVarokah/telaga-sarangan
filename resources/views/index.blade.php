@@ -195,6 +195,12 @@
             alert('{{ session('success') }}');
         </script>
     @endif
+
+    @if (session()->has('loginError'))
+        <script>
+            alert('{{ session('loginError') }}');
+        </script>
+    @endif
     {{-- Alert end --}}
 
     {{-- Jumbotron --}}

@@ -9,7 +9,6 @@
     #item_tulisan {
         font-family: 'Poppins', sans-serif;
     }
-
 </style>
 
 <header class="nanav" id="main-header">
@@ -32,22 +31,62 @@
                                 <a id="item_tulisan" class="nav-link iq-tw-3" href="#">Home</a>
                             </li>
                             <li class="nav-item">
+                                <a id="item_tulisan" class="nav-link iq-tw-3" href="#tiket">Informasi Pemesanan
+                                    Tiket</a>
+                            </li>
+                            <li class="nav-item">
                                 <a id="item_tulisan" class="nav-link iq-tw-3" href="#umkm">UMKM</a>
                             </li>
                             <li class="nav-item">
                                 <a id="item_tulisan" class="nav-link iq-tw-3" href="#wahana">Informasi Wahana</a>
                             </li>
-                            <li class="nav-item">
-                                <a id="item_tulisan" class="nav-link iq-tw-3" href="#tiket">Informasi Pemesanan
-                                    Tiket</a>
-                            </li>
+
+                            @auth
+                                {{-- <li class="nav-item dropdown">
+                                    <a id="item_tulisan" class="nav-link iq-tw-6" href="#"><b>{{ auth()->user()->name }}</b></a>
+                                        <div aria-labelledby="navbarDropdown0" class="dropdown-menu">
+                                            <a href="#" class="dropdown-item">
+                                                Profil
+                                             </a>
+                                             <form action="/logout" method="post">
+                                                @csrf
+                                                <button type="submit" class="dropdown-item">logout</button>
+                                            </form>
+                                        </div>
+                                </li> --}}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle iq-tw-5" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <b>{{ auth()->user()->name }}</b>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Profil</a></li>
+                                        <li>
+                                            <form action="/logout" method="post">
+                                                @csrf
+                                                <button type="submit" class="dropdown-item">logout</button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="d-flex iq-pl-15">
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button id="item_tulisan" type="submit"
+                                        class="btn btn-light rounded-pill pull-right iq-tw-3"
+                                        style="width: 120px; color:#1D7997; padding-top: 7px">Logout</button>
+                                </form>
+                            </div>
+                        @else
                             <li class="iq-pr-10"></li>
-                        </ul>
-                        <div class="d-flex">
-                            <a id="item_tulisan" href="#" class="btn btn-light rounded-pill pull-right iq-tw-3"
-                                style="width: 120px; color:#1D7997; padding-top: 7px" data-bs-toggle="modal"
-                                data-bs-target="#loginModal">Login</a>
-                        </div>
+                            </ul>
+                            <div class="d-flex">
+                                <a id="item_tulisan" href="#" class="btn btn-light rounded-pill pull-right iq-tw-3"
+                                    style="width: 120px; color:#1D7997; padding-top: 7px" data-bs-toggle="modal"
+                                    data-bs-target="#loginModal">Login</a>
+                            </div>
+                        @endauth
                     </div>
                 </nav>
             </div>
