@@ -14,7 +14,7 @@ use App\Post;
         }
 
         public function data($id){
-            $data = DB::table('umkm')->where("id_kat",$id)->get();
+            $data = DB::table('umkm')->where("id_kat",$id)->orderBy('barang')->get();
             $group = DB::table('kat_umkm')->where("id_kat_umkm",$id)->first();
             return view('umkm', compact('data','group'));
         }
