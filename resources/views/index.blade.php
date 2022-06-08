@@ -384,9 +384,7 @@
                                 <i class="	fas fa-check-circle fa-6x"></i>
                             </div>
 
-                            <div style="margin-top: 5%" class="card-body" type="button" style=" padding-left: 10%;padding-right: 10%;"
-                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
-                                    data-bs-target="#RiwayatModal">
+                            <div style="margin-top: 5%" class="card-body">
                                 <p id="tittle_card" class="card-tittle">Status Tiket Masuk</p>
                                 <p id="isi_cardss" class="card-text"> Tersedia </p>
                             </div>
@@ -408,17 +406,42 @@
                             </div>
 
                             <div style="margin-top: 5%" class="card-body">
-                                <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
+                                <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>                           
                                 <button type="button" style=" padding-left: 10%;padding-right: 10%;"
                                     class="btn btn-primary rounded-pill" data-bs-toggle="modal"
                                     data-bs-target="#PesanModal">
                                     Pesan
-                                </button>
+                                </button>                                
                             </div>
                         </div>
 
                         {{-- End Card --}}
                     </div>
+                    
+                    <div class="col-md-12">
+                        {{-- Start Card --}}
+
+                        <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                            <div class="warna card-header">
+                            </div>
+
+                            <div class="ca card-header">
+                                <i class="fas fa-history fa-6x"></i>
+                            </div>
+
+                            <div style="margin-top: 5%" class="card-body">
+                                <p id="tittle_card" class="card-tittle">Riwayat Pemesanan Tiket</p>
+                                <button type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                    data-bs-target="#RiwayatModal">
+                                    Cek Riwayat Pemesanan
+                                </button>
+                            </div>
+                        </div>
+                        
+                        {{-- End Card --}}
+                    </div>
+                    
                 </div>
             </center>
         </div>
