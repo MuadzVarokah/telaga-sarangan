@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="riwayatModalLabel">RIWAYAT PEMESANAN TIKET<br> TELAGA SARANGAN</h5>
+                <h5 align="center" class="modal-title" id="riwayatModalLabel" style="padding-left: 25%; color:#167594;">RIWAYAT PEMESANAN TIKET<br> TELAGA SARANGAN</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
