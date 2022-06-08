@@ -385,16 +385,13 @@
                                 <i class="	fas fa-check-circle fa-6x"></i>
                             </div>
 
-                            <div style="margin-top: 5%" class="card-body">
+                            <div style="margin-top: 5%" class="card-body" type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                    data-bs-target="#RiwayatModal">
                                 <p id="tittle_card" class="card-tittle">Status Tiket Masuk</p>
                                 <p id="isi_cardss" class="card-text"> Tersedia </p>
                             </div>
                             <div>
-                                <button type="button" style=" padding-left: 10%;padding-right: 10%;"
-                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
-                                    data-bs-target="#RiwayatModal">
-                                    Cek Riwayat
-                                </button>
                             </div>
                         </div>
 
