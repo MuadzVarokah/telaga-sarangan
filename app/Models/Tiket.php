@@ -11,12 +11,18 @@ class Tiket extends Model
     protected $table = 'tiket';
     protected $guarded = ['id_tiket'];
     public $timestamps = false;
-    // protected $fillable = [
-    //     'harga_tiket',
-    //     'waktu_beli',
-    //     'waktu_kunjungan',
-    //     'jumlah_tiket',
+    protected $fillable = [
+        'harga_tiket',
+        'waktu_beli',
+        'waktu_kunjungan',
+        'jumlah_tiket',
+        'jenis_pembayaran',
+        'harga_jasa',
+        'harga_total',
+        'kode_pembayaran',
+        'id_user',
+        'status'
 
-    // ];
+    ];
 
 }

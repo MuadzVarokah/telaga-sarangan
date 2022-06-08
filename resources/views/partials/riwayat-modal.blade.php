@@ -19,6 +19,14 @@
                                         <p class='text-center' style=" font-size: 75%;">Tanggal Pesan : {{$riwayat->waktu_pesan}}</p>
                                         <p class='text-center' style=" font-size: 75%;">Tanggal Kunjungan : {{$riwayat->waktu_kunjungan}}</p>
                                         <p class='text-center' style=" font-size: 75%;">Harga Tiket : {{$riwayat->harga}}</p>
+                                        <p class='text-center' style=" font-size: 75%;">Harga Jasa : {{$riwayat->harga_jasa}}</p>
+                                        <p class='text-center' style=" font-size: 75%;">Harga Total : {{$riwayat->harga_total}}</p>
+                                        <p class='text-center' style=" font-size: 75%;">Pembayaran : {{$riwayat->jenis_pembayaran}}</p>
+                                        <p class='text-center' style=" font-size: 75%;">Kode Pembayaran : {{$riwayat->kode_pembayaran}}</p>
+
+                                        <p class='text-center' style=" font-size: 75%;">Status : {{$riwayat->status}}</p>
+
+
 
                 
                                     </div>
