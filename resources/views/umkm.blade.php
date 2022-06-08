@@ -137,6 +137,14 @@ i:hover {
     transition:0.5s;
 }
 
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.25);
+}
+
 </style>
 
 <!doctype html>
@@ -214,14 +222,13 @@ i:hover {
 
                               ">
                 </div>
-                <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; padding-top:5%; margin-left:10%; margin-right:10%;">{{$data->barang}}</h5> <br>
+                <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 200%; padding-top:5%; margin-left:10%; margin-right:10%; color:#167594;">{{$data->barang}}</h5> <br>
                 @php
                 $total = ($data->harga_tertinggi) + ($data->harga_terendah);
                 $rata = $total/2;
                 @endphp
-                <p class='text-center' style="font-size: 75%;">{{$data->keterangan}}
-                <p class='text-center' style=" font-size: 75%;">Harga: {{$data->harga_terendah}} - {{$data->harga_tertinggi}} <br> Harga rata-rata: {{$rata}}</p>
-                
+                <p class='text-center' style="font-size: 75%; color:#167594;" >{{$data->keterangan}}
+                <p class='text-center' style=" font-size: 75%; color:#167594;"><b>Harga:</b> Rp. {{$data->harga_terendah}} - {{$data->harga_tertinggi}} <br><b> Harga rata-rata:</b> Rp. {{$rata}}</p>
               </div>
             </div>
           <!-- </a> -->

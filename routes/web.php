@@ -27,6 +27,7 @@ Route::post('/registrasi', [DashboardController::class, 'registrasi']);
 
 // Pesan
 Route::post('/pesan', [TiketController::class, 'pesan']);
+
 // Route::post('/pesan', 'App\Http\Controllers\TiketController@pesan');
 
 

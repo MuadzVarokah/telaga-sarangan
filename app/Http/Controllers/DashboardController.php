@@ -7,12 +7,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Tiket;
+
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $riwayat = Tiket::where('id_user',1)->get();
+        $wahana = DB::table('wahana')
+        ->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
+        ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')
+        ->distinct()
+        ->get();
+        $wahana = $wahana->unique('deskripsi');
+        //$wahana = array_slice($wahana->values()->all(), 0, 5, true);
+        //dd($wahana);
+        return view('index',compact('riwayat','wahana'));
     }
 
     public function registrasi(Request $request)

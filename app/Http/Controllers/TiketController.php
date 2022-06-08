@@ -22,8 +22,11 @@ class TiketController extends Controller
             'id_user' => 'required',
             'waktu_kunjungan' => 'required',
             'jumlah_tiket' => 'required',
-            'waktu_beli' => 'required'
+            'waktu_beli' => 'required',
+            'status' => 'required'
+            
         ]);
+
 
         // $harga_tiket = 1;
         // $hari = date('D', strtotime($request->waktu_kunjungan));
@@ -37,6 +40,6 @@ class TiketController extends Controller
 
         //  return view('index');.
 
-        return redirect()->back()->with('success', 'Tiket berhasil dipilih, silahkan lanjutkan pembayaran!');
+        return redirect()->back()->with('success', 'Tiket berhasil dipesan, silahkan lanjutkan pembayaran!');
     }
 }
