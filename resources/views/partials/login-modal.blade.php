@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <div class="row align-items-center" style="width: 100%">
                     <div class="col-lg-11">
-                        <h5 align="center" class="modal-title" id="loginModalLabel" style="padding-left: 15%">
+                        <h5 align="center" class="modal-title" id="loginModalLabel" style="padding-left: 15%; color:#167594;">
                             LOGIN<br><b> GO TELAGA SARANGAN</b></h5>
                     </div>
                     <div class="col-1">
