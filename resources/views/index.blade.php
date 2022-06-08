@@ -159,7 +159,6 @@
     #gambar:hover {
         transform: scale(1.4);
         transition: 0.5s;
-        margin: 10%;
         padding: 5%;
 
     }
