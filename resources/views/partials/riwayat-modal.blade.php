@@ -6,8 +6,6 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-
-                <h2 align="center" style="color:#167594;">TEST</h2>
                 @foreach($riwayat as $riwayat)
                         <div class="card col-lg-3 justify-content-center col-md-4 col-sm-6 iq-mtb-15 d-flex border-0"style=" margin-left:5%; margin-right:3%; padding-left:1%; padding-right:1%; min-width:20%; max-width: 40%; max-height:100%">
                                 <div class="iq-blog text-left iq-ptb-30 d-flex  ">
