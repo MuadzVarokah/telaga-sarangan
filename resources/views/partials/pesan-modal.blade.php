@@ -12,8 +12,8 @@
                     @csrf
                     <input type="hidden" name="id_tiket" value="">
                     <input type="hidden" name="id_user" value="1">
-                    <input type="hidden" name="harga_tiket" value="1">
-                    <div class="mb-3">
+                    <!-- <input type="hidden" name="id_harga_tiket" value="1"> -->
+                    <div class="mb-3">  
                         <label class="form-label">Tanggal Pemesanan</label>
                         <input type="date" name="waktu_kunjungan" class="form-control">
                     </div>
@@ -32,13 +32,13 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jenis Tiket : </label>
-                        <select name="harga_tiket">
+                        <select name="id_harga_tiket">
                             <option value="1">Dewasa</option>
                             <option value="2">Anak-anak</option>
                         </select>
                     </div>
                     <input name="waktu_beli" type="hidden" value="<?php echo date('Y-m-d h:i:s'); ?>">
-                    <input name="status" type="hidden" value="belum_dibayar">
+                    <input name="status" type="hidden" value="belum dibayar">
                     <input name="harga_jasa" type="hidden" value="2000">
                     <input name="kode_pembayaran" type="hidden" value="<?php echo rand(10000,99999); ?>">
                     <center>

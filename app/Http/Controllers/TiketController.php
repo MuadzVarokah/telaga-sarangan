@@ -18,13 +18,16 @@ class TiketController extends Controller
     public function pesan(Request $request)
     {
         $validatedData = $request->validate([
-            'harga_tiket' => 'required',
             'id_user' => 'required',
             'waktu_kunjungan' => 'required',
             'jumlah_tiket' => 'required',
             'waktu_beli' => 'required',
-            'status' => 'required'
-            
+            'status' => 'required',
+            'harga_jasa' => 'required',
+            'kode_pembayaran' => 'required',
+            'jenis_pembayaran' => 'required',
+            'id_harga_tiket' => 'required',
+            'harga_total' => 'required'
         ]);
 
 
@@ -32,7 +35,7 @@ class TiketController extends Controller
         // $hari = date('D', strtotime($request->waktu_kunjungan));
         // if($hari == ('Sat' || 'Sun')) {
         //     $harga_tiket = 2;
-        // };
+        // };   
 
         Tiket::create($validatedData);
 

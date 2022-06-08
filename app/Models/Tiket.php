@@ -12,7 +12,7 @@ class Tiket extends Model
     protected $guarded = ['id_tiket'];
     public $timestamps = false;
     protected $fillable = [
-        'harga_tiket',
+        'id_harga_tiket',
         'waktu_beli',
         'waktu_kunjungan',
         'jumlah_tiket',
