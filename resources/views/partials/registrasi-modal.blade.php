@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="registrasiModalLabel">REGISTRASI <br> TELAGA SARANGAN</h5>
+                <h5 align="center" class="modal-title" id="registrasiModalLabel" style="padding-left: 25%; color:#167594;">REGISTRASI <br><b> GO TELAGA SARANGAN</b></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -50,10 +50,13 @@
                         @enderror
                     </div>
                     <input type="hidden" name="role" value="user" class="form-control">
-
+                    <center>
                     <button type="submit" class="btn btn-primary">Registrasi</button>
+                    </center>
                 </form>
+                <center>
                 Sudah punya akun? Silahkan <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                </center> 
             </div>
         </div>
     </div>
