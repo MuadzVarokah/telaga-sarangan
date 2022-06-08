@@ -137,6 +137,14 @@ i:hover {
     transition:0.5s;
 }
 
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.25);
+}
+
 </style>
 
 <!doctype html>
