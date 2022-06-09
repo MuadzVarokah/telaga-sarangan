@@ -12,7 +12,6 @@
                     @csrf
                     <input type="hidden" name="id_tiket" value="">
                     <input type="hidden" name="id_user" value="1">
-                    <!-- <input type="hidden" name="id_harga_tiket" value="1"> -->
                     <div class="mb-3">  
                         <label class="form-label">Tanggal Pemesanan</label>
                         <input type="date" name="waktu_kunjungan" class="form-control">

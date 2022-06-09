@@ -14,9 +14,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $riwayat = Tiket::join('harga_tiket','harga_tiket.id_harga_tiket','=','tiket.harga_tiket')
+        
+        $riwayat = Tiket::join('harga_tiket','harga_tiket.id_harga_tiket','=','tiket.id_harga_tiket')
         ->where('id_user',1)
-        ->get();
+        ->get();   
         $wahana = DB::table('wahana')
         ->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
         ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')

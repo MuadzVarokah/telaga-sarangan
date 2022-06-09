@@ -27,7 +27,6 @@ class TiketController extends Controller
             'kode_pembayaran' => 'required',
             'jenis_pembayaran' => 'required',
             'id_harga_tiket' => 'required',
-            'harga_total' => 'required'
         ]);
 
 
