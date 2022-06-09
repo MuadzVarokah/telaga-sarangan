@@ -3,7 +3,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-
+    .container{
+        --bs-gutter-x: 15% !important;
+    }
     body {
         background-color: #f5fdfd;
     }
@@ -38,9 +40,6 @@
         color: #167594;
         transition: 0.5s;
     }
-
-
-
     #tiket {
         margin-top: 40px;
     }
@@ -184,7 +183,7 @@
     <link rel="stylesheet" href="{!! asset('css/ionicons.min.css') !!}">
 </head>
 
-<body data-spy="scroll" style="background-color: #ffffff" data-offset="80">
+<body data-spy="scroll" style="background-color: #ffffff;" data-offset="80">
     {{-- Navbar --}}
     @include('partials.navbar')
     {{-- Navbar End --}}
@@ -198,7 +197,8 @@
     {{-- Alert end --}}
 
     {{-- Jumbotron --}}
-    <section class="jumbotron jumbotron-fluid bg-cover text-white iq-pt-10" style="background-image: linear-gradient(to bottom, rgba(3, 15, 29, 0.7) 50%,rgba(3, 15, 29, 0.6) 100%), url('{!! asset('images/sarangan3.png') !!}');
+    <section class="jumbotron jumbotron-fluid bg-cover text-white iq-pt-10" 
+    style="background-image: linear-gradient(to bottom, rgba(3, 15, 29, 0.7) 50%,rgba(3, 15, 29, 0.6) 100%), url('{!! asset('images/sarangan3.png') !!}');
         background-size: cover; background-position: center center; background-repeat: no-repeat;">
         <div class="container">
             <center style="letter-spacing: 1px;">
@@ -328,7 +328,7 @@
 
 
     {{-- Konten Tiket --}}
-    <section id="tiket" style="background-color: #f5fdfd;padding-top: 2%;padding-bottom: 2%">
+    <section id="tiket" style="background-color: #f5fdfd;padding-top: 2%;padding-bottom: 2%;">
 
         <div class="container">
             <center>
@@ -341,7 +341,7 @@
 
                         {{-- Start Card --}}
 
-                        <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                        <div class="card rounded-3" style="width: 95%;height: 17rem;">
                             <div class="warna card-header">
                             </div>
 
@@ -376,7 +376,7 @@
                     {{-- end card --}}
                     <div class="col-md-4">
                         {{-- Start Card --}}
-                        <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                        <div class="card rounded-3" style="width: 95%;height: 17rem;">
                             <div class="warna card-header">
                             </div>
 
@@ -398,7 +398,7 @@
                     <div class="col-md-4">
                         {{-- Start Card --}}
 
-                        <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                        <div class="card rounded-3" style="95%;height: 17rem;">
                             <div class="warna card-header">
                             </div>
 
@@ -616,18 +616,18 @@
                 {{-- start wahana --}}
                 
                 
-                <div class="col-md-6" style="margin-top: 5%;margin-bottom: 5%">
-                    <img id="gambar_wahana" style='height:280px; max-width:280px' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
+                <div class="col-md-6" style="margin-top: 5%; margin-bottom: 5%; ">
+                    <img id="gambar_wahana" style='max-height:90%; max-width:100%' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
                 </div>
-                <div class="col-md-6" style="margin-top: 5%">
+                <div class="col-md-6" style="margin-top: 5%;">
                     <h5 id="nama_web" style="color:#167594; margin-bottom: 5%">{{$wahana->nama}}</h5>
                     
-                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> {{$wahana->deskripsi}} </p>
+                    <p id="item_tulisan" style="color:#167594;font-size: 105%; margin-right:5%; text-align: justify;"> {{$wahana->deskripsi}} </p>
                     @php
                         $cost2 = '';
                         if ($wahana->nama_harga2 != null) $cost2 = $wahana->nama_harga2 .": Rp. ". $wahana->harga2 .".000";
                     @endphp
-                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> {{$wahana->nama_harga}} : Rp. {{$wahana->harga}}.000 
+                    <p id="item_tulisan" style="color:#167594;font-size: 105%; margin-right:5%: text-align: justify;"> {{$wahana->nama_harga}} : Rp. {{$wahana->harga}}.000 
                                                                                                 <br> {{$cost2}} </p>  
                 </div>
 
