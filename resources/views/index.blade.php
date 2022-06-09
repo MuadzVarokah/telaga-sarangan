@@ -195,16 +195,10 @@
             alert('{{ session('success') }}');
         </script>
     @endif
-
-    @if (session()->has('loginError'))
-        <script>
-            alert('{{ session('loginError') }}');
-        </script>
-    @endif
     {{-- Alert end --}}
 
     {{-- Jumbotron --}}
-    <section class="jumbotron bg-cover text-white iq-pt-10" style="background-image: linear-gradient(to bottom, rgba(3, 15, 29, 0.7) 50%,rgba(3, 15, 29, 0.6) 100%), url('{!! asset('images/sarangan3.png') !!}');
+    <section class="jumbotron jumbotron-fluid bg-cover text-white iq-pt-10" style="background-image: linear-gradient(to bottom, rgba(3, 15, 29, 0.7) 50%,rgba(3, 15, 29, 0.6) 100%), url('{!! asset('images/sarangan3.png') !!}');
         background-size: cover; background-position: center center; background-repeat: no-repeat;">
         <div class="container">
             <center style="letter-spacing: 1px;">
@@ -390,7 +384,9 @@
                                 <i class="	fas fa-check-circle fa-6x"></i>
                             </div>
 
-                            <div style="margin-top: 5%" class="card-body">
+                            <div style="margin-top: 5%" class="card-body" type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                    data-bs-target="#RiwayatModal">
                                 <p id="tittle_card" class="card-tittle">Status Tiket Masuk</p>
                                 <p id="isi_cardss" class="card-text"> Tersedia </p>
                             </div>
@@ -417,37 +413,12 @@
                                     class="btn btn-primary rounded-pill" data-bs-toggle="modal"
                                     data-bs-target="#PesanModal">
                                     Pesan
-                                </button>     
-                            </div>
-                        </div>
-
-                        {{-- End Card --}}
-                    </div>
-                    
-                    <div class="col-md-12">
-                        {{-- Start Card --}}
-
-                        <div class="card rounded-3" style="width: 20rem;height: 17rem;">
-                            <div class="warna card-header">
-                            </div>
-
-                            <div class="ca card-header">
-                                <i class="fas fa-history fa-6x"></i>
-                            </div>
-
-                            <div style="margin-top: 5%" class="card-body">
-                                <p id="tittle_card" class="card-tittle">Riwayat Pemesanan Tiket</p>
-                                <button type="button" style=" padding-left: 10%;padding-right: 10%;"
-                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
-                                    data-bs-target="#RiwayatModal">
-                                    Cek Riwayat Pemesanan
                                 </button>
                             </div>
                         </div>
-                        
+
                         {{-- End Card --}}
                     </div>
-                    
                 </div>
             </center>
         </div>
@@ -575,7 +546,7 @@
 
     {{-- Start Konten Wahana --}}
 
-    <section style="margin-bottom: 2%;background-color: #f5fdfd" id="wahana">
+    <section style="background-color: #f5fdfd" id="wahana">
 
         <div class="container">
             <center>
@@ -593,8 +564,8 @@
                 {{-- start wahana --}}
                 
                 
-                <div class="col-md-6" style="margin-top: 5%">
-                    <img id="gambar_wahana" style='height:300px; max-width:450px' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
+                <div class="col-md-6" style="margin-top: 5%;margin-bottom: 5%">
+                    <img id="gambar_wahana" style='height:280px; max-width:280px' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
                 </div>
                 <div class="col-md-6" style="margin-top: 5%">
                     <h5 id="nama_web" style="color:#167594; margin-bottom: 5%">{{$wahana->nama}}</h5>
@@ -642,7 +613,7 @@
 
         <div class="container">
             <div class="row align-item-start">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Informasi Telaga Sarangan</h6>
                     <p> Jalan Raya Telaga Sarangan, Sarangan, Plaosan, Telaga Pasir, Sarangan, Plaosan, Kabupaten
                         Magetan, Jawa Timur 63361.</p>
@@ -652,7 +623,20 @@
                     <p><i style="color: white;margin-left: 10px" class="fa fa-envelope"></i> gotelagasarangan@gmail.com
                     </p>
                     <p><i style="color: white;margin-left: 10px" class="fa fa-facebook"></i> gotelagasarangan</p>
-                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">MAMONIR</h6>
+
+                    <div class="mx-auto">
+                        <div class="iq-copyright ">
+                            Copyright @
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> AMMONIR All Rights Reserved
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">AMMONIR</h6>
                     <p>Kami Membantu wisata anda, dimanapun dan kapanpun.</p>
                 </div>
                 <!-- <div class="col-md-6">
@@ -666,29 +650,29 @@
                 </div>
                  -->
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Lokasi Telaga Sarangan</h6>
                     <iframe style="margin-bottom: 3%"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15816.22055288366!2d111.20902322421088!3d-7.677221761446002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e798e9941fbceb1%3A0x49bf06f3bb4505db!2sTelaga%20Sarangan!5e0!3m2!1sid!2sid!4v1654059780643!5m2!1sid!2sid"
-                        width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
             </div>
         </div>
-        <center>
+        {{-- <center>
             <div class="row iq-mt-10">
                 <div class="mx-auto">
                     <div class="iq-copyright ">
                         Copyright @
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> MAMONIR All Rights Reserved
+                        </script> AMMONIR All Rights Reserved
                     </div>
                 </div>
             </div>
             </div>
-        </center>
+        </center> --}}
 
 
     </footer>

@@ -9,6 +9,37 @@
     #item_tulisan {
         font-family: 'Poppins', sans-serif;
     }
+
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(3, 15, 29, 0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(255, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(255, 255, 255);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:focus .dropdown-content {display: block;}
+
+
 </style>
 
 <header class="nanav" id="main-header">
@@ -54,30 +85,23 @@
                                             </form>
                                         </div>
                                 </li> --}}
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle iq-tw-5" href="#" id="navbarDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <b>{{ auth()->user()->name }}</b>
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Profil</a></li>
-                                        <li>
-                                            <form action="/logout" method="post">
-                                                @csrf
-                                                <button type="submit" class="dropdown-item">logout</button>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
+
+                                <div class="dropdown nav-item">
+                                    <a class="dropbtn nav-link dropdown-toggle iq-tw-5" id="navbarDropdown"  role="button"> <b>{{ auth()->user()->name }}</b></a>
+                                    <div class="dropdown-content">
+                                        <a style="margin-left: 6%" href="#">Profil</a>
+                                      <a style="margin-left: 6%" href="#"><form action="/logout" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">logout</button>
+                                    </form></a>
+                                
+                                    </div>
+                                  </div>
+
+                                
+                               
                             </ul>
-                            <div class="d-flex iq-pl-15">
-                                <form action="/logout" method="post">
-                                    @csrf
-                                    <button id="item_tulisan" type="submit"
-                                        class="btn btn-light rounded-pill pull-right iq-tw-3"
-                                        style="width: 120px; color:#1D7997; padding-top: 7px">Logout</button>
-                                </form>
-                            </div>
+                           
                         @else
                             <li class="iq-pr-10"></li>
                             </ul>
