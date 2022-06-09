@@ -652,7 +652,7 @@
                     <p><i style="color: white;margin-left: 10px" class="fa fa-envelope"></i> gotelagasarangan@gmail.com
                     </p>
                     <p><i style="color: white;margin-left: 10px" class="fa fa-facebook"></i> gotelagasarangan</p>
-                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">AMMONIR</h6>
+                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">MAMONIR</h6>
                     <p>Kami Membantu wisata anda, dimanapun dan kapanpun.</p>
                 </div>
                 <!-- <div class="col-md-6">
@@ -683,7 +683,7 @@
                         Copyright @
                         <script>
                             document.write(new Date().getFullYear())
-                        </script> AMMONIR All Rights Reserved
+                        </script> MAMONIR All Rights Reserved
                     </div>
                 </div>
             </div>
