@@ -6,7 +6,7 @@
 *::-moz-selection { background: deepskyblue; color: #fff; text-shadow: none; }
 ::-moz-selection { background: deepskyblue; color: #fff; text-shadow: none; }
 ::selection { background: deepskyblue; color: #fff; text-shadow: none; }
-body { font-family: 'DM Sans', sans-serif; font-weight: 400; font-style: normal; font-size: 14px; line-height: 26px; color: #666666; overflow-x: hidden; }
+body { font-family: 'DM Sans', sans-serif; font-weight: 400; font-style: normal; font-size: 14px; line-height: 26px; color: #ffffff; overflow-x: hidden; }
 a, .button { transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; color: #333333; }
 a:focus { text-decoration: none !important; }
 a:focus, a:hover { color: deepskyblue; text-decoration: none !important; }
@@ -312,7 +312,7 @@ Margin Right
 .iq-font-blue { color: #4ac4f3; }
 .iq-font-white { color: #ffffff; }
 .iq-font-black { color: #333333; }
-.iq-font-light { color: #666666; }
+.iq-font-light { color: #ffffff; }
 .iq-font-gray { color: #a2a4ad; }
 
 /*---------------------------------------------------------------------
@@ -363,8 +363,8 @@ header .dropdown>.dropdown-menu {transition: all .5s ease-in-out;-moz-transition
 	-o-transition: all .5s ease-in-out;-webkit-transition: all .5s ease-in-out;display: none;-webkit-animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1) both;
 	animation: fade-in-bottom .6s cubic-bezier(.39, .575, .565, 1) both}
 header .dropdown-toggle:after {content: "\f3d0";display: inline-block;font-family: Ionicons;border: none;font-size: 12px;line-height: normal;font-weight: 700;vertical-align: baseline;}
-header .navbar .navbar-nav .nav-item a.dropdown-item { padding: 8px 15px; font-size: 14px; color:#666666;}
-header .navbar .navbar-nav .nav-item a.dropdown-item:hover{ color:#1e7e34;}
+header .navbar .navbar-nav .nav-item a.dropdown-item { padding: 8px 15px; font-size: 14px; color:#ffffff;}
+header .navbar .navbar-nav .nav-item a.dropdown-item:hover{ color:#4ac4f3; }
 @-webkit-keyframes fade-in-bottom {
 	0% {
 		transform: translateY(50px);

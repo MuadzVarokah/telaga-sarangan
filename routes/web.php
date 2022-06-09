@@ -21,14 +21,20 @@ use App\Http\Controllers\LoginController;
 // });
 
 // Dashboard
-Route::get('/', [DashboardController::class, 'index']);
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->middleware('guest');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('guest');
 
 // Registrasi
 Route::post('/registrasi', [DashboardController::class, 'registrasi']);
 
 // Login
-Route::post('/login', [LoginController::class, 'index'])/*->middleware('guest')*/;
+Route::post('/login', [LoginController::class, 'index']);
+
+// User
+Route::get('/user', [LoginController::class, 'user']);
+
+// Admin
+Route::get('/admin', [LoginController::class, 'admin']);
 
 // Logout
 Route::post('/logout', [LoginController::class, 'logout']);

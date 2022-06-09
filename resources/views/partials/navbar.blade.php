@@ -13,33 +13,37 @@
 
 
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(3, 15, 29, 0.8);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(3, 15, 29, 0.8);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: rgb(255, 0, 0);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: rgb(255, 0, 0);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: rgb(255, 255, 255);}
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: rgb(255, 255, 255);
+    }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 
-.dropdown:focus .dropdown-content {display: block;}
-
-
+    .dropdown:focus .dropdown-content {
+        display: block;
+    }
 </style>
 
 <header class="nanav" id="main-header">
@@ -76,9 +80,7 @@
                                 {{-- <li class="nav-item dropdown">
                                     <a id="item_tulisan" class="nav-link iq-tw-6" href="#"><b>{{ auth()->user()->name }}</b></a>
                                         <div aria-labelledby="navbarDropdown0" class="dropdown-menu">
-                                            <a href="#" class="dropdown-item">
-                                                Profil
-                                             </a>
+                                            <a href="#" class="dropdown-item">Profil</a>
                                              <form action="/logout" method="post">
                                                 @csrf
                                                 <button type="submit" class="dropdown-item">logout</button>
@@ -87,21 +89,16 @@
                                 </li> --}}
 
                                 <div class="dropdown nav-item">
-                                    <a class="dropbtn nav-link dropdown-toggle iq-tw-5" id="navbarDropdown"  role="button"> <b>{{ auth()->user()->name }}</b></a>
+                                    <a class="dropbtn nav-link dropdown-toggle iq-tw-5" id="navbarDropdown" type="button"> <b>{{ auth()->user()->name }}</b></a>
                                     <div class="dropdown-content">
-                                        <a style="margin-left: 6%" href="#">Profil</a>
-                                      <a style="margin-left: 6%" href="#"><form action="/logout" method="post">
+                                        <a style="margin-left: 6%" class="dropdown-item" href="#">Profil</a>
+                                      <a style="margin-left: 6%" class="dropdown-item" href="#"><form action="/logout" method="post">
                                         @csrf
                                         <button type="submit" class="dropdown-item">logout</button>
                                     </form></a>
-                                
                                     </div>
                                   </div>
-
-                                
-                               
                             </ul>
-                           
                         @else
                             <li class="iq-pr-10"></li>
                             </ul>
