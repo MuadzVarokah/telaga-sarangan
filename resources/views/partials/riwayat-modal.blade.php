@@ -16,19 +16,20 @@
                                     $total = 0;
                                     @endphp 
                                         <h5 class="text-center iq-tw-6 iq-pb-5" style="font-size: 80%; padding-top:5%; margin-left:10%; margin-right:10%;">ID Tiket : {{$riwayat->id_tiket}}</h5> <br>
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Jumlah Tiket : {{$riwayat->jumlah_tiket}}</p>
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Tanggal Pesan : {{$riwayat->waktu_beli}}</p>
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Tanggal Kunjungan : {{$riwayat->waktu_kunjungan}}</p>
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Harga Tiket : {{$riwayat->harga}}</p>
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Harga Jasa : {{$riwayat->harga_jasa}}</p>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Jumlah Tiket : {{$riwayat->jumlah_tiket}}</h5>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Tanggal Pesan : {{$riwayat->waktu_beli}}</h5>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Tanggal Kunjungan : {{$riwayat->waktu_kunjungan}}</h5>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Jenis Tiket : {{$riwayat->nama}}</h5>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Harga Tiket : {{$riwayat->harga}}</h5>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Harga Jasa : {{$riwayat->harga_jasa}}</h5>
                                         @php
                                         $total = ($riwayat->jumlah_tiket * $riwayat->harga)+$riwayat->harga_jasa;
                                         @endphp
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Harga Total : {{$total}}</p>
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Pembayaran : {{$riwayat->jenis_pembayaran}}</p>
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Kode Pembayaran : {{$riwayat->kode_pembayaran}}</p>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Harga Total : {{$total}}</h5>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Pembayaran : {{$riwayat->jenis_pembayaran}}</h5>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Kode Pembayaran : {{$riwayat->kode_pembayaran}}</h5>
 
-                                        <p class='text' style=" margin-left:5%; font-size: 75%;">Status : {{$riwayat->status}}</p>
+                                        <h5 class='text iq-tw-6 iq-pb-5' style=" margin-left:5%; font-size: 75%;">Status : {{$riwayat->status}}</h5>
 
 
 

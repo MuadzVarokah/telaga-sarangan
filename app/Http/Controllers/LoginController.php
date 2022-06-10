@@ -54,10 +54,11 @@ class LoginController extends Controller
         if(auth()->user()->role !== 'user') {
             abort(403);
         };
-
+        $userID = Auth::id();
         $riwayat = Tiket::join('harga_tiket','harga_tiket.id_harga_tiket','=','tiket.id_harga_tiket')
-        ->where('id_user',Auth::id())
-        ->get();   
+        ->where('id_user',$userID)
+        ->get(); 
+        // dd($riwayat);  
         $wahana = DB::table('wahana')
         ->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
         ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')

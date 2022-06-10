@@ -14,7 +14,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $riwayat = [];
+        // $riwayat = [];
         $wahana = DB::table('wahana')
         ->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
         ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')
