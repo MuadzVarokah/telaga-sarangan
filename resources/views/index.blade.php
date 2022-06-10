@@ -405,15 +405,18 @@
                             <div class="ca card-header">
                                 <i class="fas fa-edit fa-6x"></i>
                             </div>
-
+                        
                             <div style="margin-top: 5%" class="card-body">
                                 <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
+                                @if ($count)
                                 <button type="button" style=" padding-left: 10%;padding-right: 10%;"
                                     class="btn btn-primary rounded-pill" data-bs-toggle="modal"
                                     data-bs-target="#PesanModal">
                                     Pesan
                                 </button>
+                                @endif
                             </div>
+                           
                         </div>
 
                         {{-- End Card --}}

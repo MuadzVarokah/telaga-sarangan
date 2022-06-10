@@ -59,6 +59,10 @@ class LoginController extends Controller
         ->where('id_user',$userID)
         ->get(); 
         // dd($riwayat);  
+        $count = $riwayat->filter(function($item) {
+         return $item->status != 'belum dibayar';
+        })->count();
+
         $wahana = DB::table('wahana')
         ->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
         ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')
@@ -67,7 +71,7 @@ class LoginController extends Controller
         $wahana = $wahana->unique('deskripsi');
         //$wahana = array_slice($wahana->values()->all(), 0, 5, true);
         //dd($wahana);
-        return view('index',compact('riwayat','wahana'));
+        return view('index',compact('riwayat','wahana','count'));
     }
 
     public function admin(Request $request)
