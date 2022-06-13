@@ -499,13 +499,13 @@
                     hasil-hasil pembangunan.</p>
 
                 <div class="row align-items-start">
-                    <div class="col-md-4">
-
+                @foreach ($kat as $kat)
+                    <div class="col-md-4"> 
                         {{-- start --}}
-                        <a style="text-decoration: none;" href="umkm/1">
+                        <a style="text-decoration: none;" href="{{ url('umkm') }}/ {{ $kat->id_kat_umkm }}">
 
                             <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
-                                <img src="{!! asset('images/umkm_oleh.png') !!}" class="card-img-top" alt="UMKM Oleh2">
+                                <img src="{!! asset('images/'.$kat->gambar.'') !!}" class="card-img-top" alt="UMKM_{{$kat->nama}}">
                                 <div class="card-body">
                                     <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">Oleh
                                         - Oleh</p>
@@ -513,81 +513,9 @@
                             </div>
                         </a>
                         {{-- end --}}
-
                     </div>
-                    <div class="col-md-4">
-                        {{-- start --}}
-                        <a style="text-decoration: none;" href="umkm/2">
-
-                            <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
-                                <img src="{!! asset('images/umkm_sayur.png') !!}" class="card-img-top" alt="UMKM Sayur">
-                                <div class="card-body">
-                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">
-                                        Sayur dan Buah</p>
-                                </div>
-                            </div>
-                        </a>
-                        {{-- end --}}
-                    </div>
-                    <div class="col-md-4">
-                        {{-- start --}}
-                        <a style="text-decoration: none;" href="umkm/3">
-
-                            <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
-                                <img src="{!! asset('images/umkm_kuliner.png') !!}" class="card-img-top" alt="UMKM Kuliner">
-                                <div class="card-body">
-                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">
-                                        Kuliner</p>
-                                </div>
-                            </div>
-                        </a>
-                        {{-- end --}}
-                    </div>
-                    <div class="col-md-4">
-                        {{-- start --}}
-                        <a style="text-decoration: none;" href="umkm/4">
-
-                            <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
-                                <img src="{!! asset('images/umkm_fashion.png') !!}" class="card-img-top" alt="UMKM Fashion">
-                                <div class="card-body">
-                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">
-                                        Fashion</p>
-                                </div>
-                            </div>
-                        </a>
-                        {{-- end --}}
-                    </div>
-
-                    <div class="col-md-4">
-                        {{-- start --}}
-                        <a style="text-decoration: none;" href="umkm/5">
-
-                            <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
-                                <img src="{!! asset('images/umkm_cendra.png') !!}" class="card-img-top" alt="UMKM Cendramata">
-                                <div class="card-body">
-                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">
-                                        Cendera Mata</p>
-                                </div>
-                            </div>
-                        </a>
-                        {{-- end --}}
-                    </div>
-
-
-                    <div class="col-md-4">
-                        {{-- start --}}
-                        <a style="text-decoration: none;" href="umkm/6">
-
-                            <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
-                                <img src="{!! asset('images/umkm_tanaman.png') !!}" class="card-img-top" alt="UMKM Tanaman">
-                                <div class="card-body">
-                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">
-                                        Tanaman</p>
-                                </div>
-                            </div>
-                        </a>
-                        {{-- end --}}
-                    </div>
+                    @endforeach
+                    
             </center>
 
         </div>
