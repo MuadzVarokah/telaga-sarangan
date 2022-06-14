@@ -1,4 +1,151 @@
-<!doctype html>
+                @extends('template_admin')
+                 @section('konten')
+                 
+                 <img src="{!! asset('images/bg_admin.png') !!}"  class="img-fluid" alt="Responsive image">
+
+                  {{-- hai --}}
+                  <h3 class="mt-3" id="judul">Hai, MAMONIR</h3>
+                  <p id="judul" style="color: #bfbcbc" >Selamat datang di dashboard admin Go Telaga Sarangan</p>
+
+                  {{-- Card --}}
+
+                  <div class="row">
+                    <div class="col-md-3 mt-3">
+                      <div class="cards rounded-3" style="width: 18rem;">
+                        <div style="background: #775DA6" class="card-header"></div>
+                        <div class="card-body">
+                        <div class="row" >
+                          <div class="col-md-6">
+                            <h5 class="card-title">456</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">UMKM</h6>
+                          </div>
+                          <div class="col-md-6">
+                            <i class="material-icons" style="color: #775DA6;font-size:32px">check_box</i>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3 mt-3">
+                      <div class="cards rounded-3" style="width: 18rem;">
+                        <div style="background: #70B6C1" class="card-header"></div>
+                        <div class="card-body">
+                        <div class="row" >
+                          <div class="col-md-6">
+                            <h5 class="card-title">33.98%</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Pengunjung</h6>
+                          </div>
+                          <div class="col-md">
+                            <i class="material-icons" style="color: #70B6C1;font-size:32px">trending_up</i>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-md-3 mt-3">
+                      <div class="cards rounded-3" style="width: 18rem;">
+                        <div style="background: #F9837C" class="card-header"></div>
+                        <div class="card-body">
+                        <div class="row" >
+                          <div class="col-md-6">
+                            <h5 class="card-title">435</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Tiket Terjual</h6>
+                          </div>
+                          <div class="col-md">
+                            <i class="material-icons" style="color: #F9837C;font-size:32px">account_balance_wallet</i>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3 mt-3">
+                      <div class="cards rounded-3" style="width: 18rem;">
+                        <div style="background: #F3CC5C" class="card-header"></div>
+                        <div class="card-body">
+                        <div class="row" >
+                          <div class="col-md-6">
+                            <h5 class="card-title">435</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Saran Aduan</h6>
+                          </div>
+                          <div class="col-md">
+                            <i class="material-icons" style="color: #F3CC5C;font-size:32px">send</i>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div style="padding: 2%" class="cards mt-5 rounded-3">
+                    <h3 id="judul" >Tiket Terjual</h3>
+                    <h6 class="card-subtitle mb-2 text-muted">1 minggu terakhir</h6>
+
+                    <div class="table-responsive">
+                      <table class="table table-hover mt-4 text-center">
+                        <tr>
+  
+                          <th>No</th>
+                          <th>Username & Email</th>
+                          <th>Jumlah</th>
+                          <th>Pembayaran</th>
+                          <th>Kategori</th>
+                          <th>Tanggal Pembelian</th>
+                        </tr>
+  
+                        <tr>
+                          <td>1</td>
+                          <td>Mamonir <br> <div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
+                          <td>14</td>
+                          <td>ShopeePay</td>
+                          <td>Dewasa</td>
+                          <td>19 Agustus 1945</td>
+  
+                        </tr>
+  
+                        <tr>
+                          <td>2</td>
+                          <td>Mamonir <br><div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
+                          <td>14</td>
+                          <td>ShopeePay</td>
+                          <td>Dewasa</td>
+                          <td>19 Agustus 1945</td>
+  
+                        </tr>
+  
+  
+                        <tr>
+                          <td>3</td>
+                          <td>Mamonir <br><div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
+                          <td>14</td>
+                          <td>ShopeePay</td>
+                          <td>Dewasa</td>
+                          <td>19 Agustus 1945</td>
+  
+                        </tr>
+  
+                        <tr>
+                          <td>4</td>
+                          <td>Mamonir <br><div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
+                          <td>14</td>
+                          <td>ShopeePay</td>
+                          <td>Dewasa</td>
+                          <td>19 Agustus 1945</td>
+  
+                        </tr>
+  
+                      </table>
+                    </div>
+                  </div>
+
+                 @endsection
+
+
+{{-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -324,4 +471,4 @@
 
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="{!! asset('js/admin.js') !!}"></script>
   </body>
-</html>
+</html> --}}

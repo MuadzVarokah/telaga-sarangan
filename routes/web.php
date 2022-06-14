@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TiketController;
@@ -34,7 +35,7 @@ Route::post('/login', [LoginController::class, 'index']);
 Route::get('/user', [LoginController::class, 'user']);
 
 // Admin
-Route::get('/admin', [LoginController::class, 'admin']);
+// Route::get('/admin', [LoginController::class, 'admin']);
 
 // Logout
 Route::post('/logout', [LoginController::class, 'logout']);
@@ -43,6 +44,10 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::post('/pesan', [TiketController::class, 'pesan']);
 
 // Route::post('/pesan', 'App\Http\Controllers\TiketController@pesan');
+
+// Admin
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin/tiket', [AdminController::class, 'tiket']);
 
 
 Route::get('/umkm/{id}', 'App\Http\Controllers\UmkmController@data');

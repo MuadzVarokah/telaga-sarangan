@@ -156,7 +156,7 @@
     }
 
     #gambar:hover {
-        transform: scale(1.4);
+        transform: scale(1.2);
         transition: 0.5s;
         padding: 5%;
 
@@ -241,14 +241,15 @@
                         terdapat wahana seperti menaiki kapal, menunggangi kuda. Selain itu juga Telaga Sarangan
                         menawarkan oleh - oleh dan makanan ringan yang khas
                         seperti lempeng, rengginang, jenang candi, sate kelinci, pecel pincuk, berbagai macam souvenir
-                        dan masih banyak lagi. Selain itu, Sarangan juga memiliki legenda sendiri yang asik untuk
-                        disimak lo, legendanya sendiri menceritakan terbentuknya Telaga Sarangan. <strong>Menurut
-                            Legenda</strong>, Telaga Sarangan berasal dari sepasang suami istri yang bernama Kyai Pasir
-                        dan Nyai Pasir, setelah bertahun-tahun hidup bersama, Kyai dan Nyai Pasir belum juga dikaruniai
-                        buah hati.</p>
+                        dan masih banyak lagi.  </p>
                 </div>
                 <div class="col-md-12">
                     <p id="item_tulisan" style="color: #1D7997; text-align: justify;">
+                        Selain itu, Sarangan juga memiliki legenda sendiri yang asik untuk
+                        disimak lo, legendanya sendiri menceritakan terbentuknya Telaga Sarangan.<strong>Menurut
+                            Legenda</strong>, Telaga Sarangan berasal dari sepasang suami istri yang bernama Kyai Pasir
+                        dan Nyai Pasir, setelah bertahun-tahun hidup bersama, Kyai dan Nyai Pasir belum juga dikaruniai
+                        buah hati.
                         Suatu ketika, Kyai dan Nyai Pasir bersemedi untuk memohon kepada Sang Hyang Widhi agar segera
                         diberikan anak.
                         Harapan pasangan ini pun terkabul, mereka dikaruniai seorang anak laki-laki yang diberi nama
