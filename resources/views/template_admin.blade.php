@@ -12,20 +12,7 @@
         #judul {
           font-family:'Poppins',sans-serif;
         }
-
-        .btn-success {
-        background-color: #59BCFF;
-        border:none;
-    }
-
-    .btn-success:hover {
-        background-color: #1c557a;
-    }
-
-    .btn-success:focus {
-        background-color: #1c557a;
-        border:none;
-    }
+        
 
         .cards {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -49,6 +36,10 @@
         .material-icons {
           
           color:#808080;
+        }
+
+        .background_click {
+        color: yellowgreen;
         }
         
   </style>
@@ -78,8 +69,8 @@
                   <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                       
                     <li class="nav-item">
-                          <a href="/admin" class="nav-link align-middle px-0">
-                            <i class="material-icons">dashboard</i> <span id="side_item" class="ms-1 d-none d-sm-inline">Dashboard</span>
+                          <a href="/admin" id="background_klik" class="nav-link align-middle px-0">
+                            <i class="material-icons">dashboard</i> <span id="side_item" class=" ms-1 d-none d-sm-inline ">Dashboard</span>
                           </a>
                       </li>
 
@@ -114,7 +105,7 @@
 
                   
                   <li class="nav-item">
-                    <a href="#" class="nav-link px-0 align-middle">
+                    <a href="/admin/wahana" class="nav-link px-0 align-middle">
                       <i class="material-icons">event_note</i> <span id="side_item" class="ms-1 d-none d-sm-inline">Info Wahana</span></a>
                 </li>
 

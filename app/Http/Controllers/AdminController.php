@@ -16,4 +16,9 @@ class AdminController extends Controller
     {
         return view('tiket');
     }
+
+    public function wahana()
+    {
+        return view('wahana');
+    }
 }
