@@ -32,9 +32,10 @@
 </style>
 
 <div style="padding: 2%" class="cards mt-2 rounded-3">
-    <h3 id="judul" >Wahana</h3>
-    <h6 class="card-subtitle mb-2 text-muted">Tabel Data Informasi Wahana</h6>
+    <h3 id="judul" >Kategori UMKM</h3>
+    <h6 class="card-subtitle mb-2 text-muted">Tabel Data Informasi Kategori UMKM</h6>
 
+    
     <div class="d-grid gap-2 d-md-block mt-3"> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">
         Tambah
       </button> </div>
@@ -42,30 +43,41 @@
     <div class="table-responsive">
         <table class="table table-hover mt-2 text-center">
             <tr>
-      
-              <th>No</th>
-              <th>Nama</th>
-              <th>Gambar</th>
-              <th>Deskripsi</th>
+                <th>No</th>
+              <th>Jenis UMKM</th>
+              <th>Nama Barang</th>
+              <th>Gambar Barang</th>
+              <th>Keterangan</th>
+              <th>Harga Terendah</th>
+              <th>Harga Tertinggi</th>
               <th class="">Aksi</th>
       
             </tr>
       
             <tr>
+     
               <td>1</td>
-              <td>Speedboat</td>
-              <td><img src="{!! asset('images/bg_admin.png') !!}" width="150"  class="img-fluid" alt="Responsive image"></td>
+              <td>Oleh - Oleh</td>
+              <td>Pisau</td>
+              <td><img src=""  class="img-fluid" alt="image Oleh2"></td>
               <td><textarea readonly class="form-control" id="exampleFormControlTextarea1" rows="3" >Merupakan Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dolores ex animi cupiditate deserunt accusantium consequuntur ab. Repudiandae atque laborum officia ipsa possimus libero rerum quam nostrum eaque! Laborum, magni!</textarea></td>
+              <td>Rp.10.000</td>
+              <td>Rp.15.000</td>
+              
               <td> <div class="d-grid gap-2 d-md-block"> <button class="btn btn-success">Ubah</button>  <button class="btn btn-danger ">Hapus</button></div>  </td>
-    
             </tr>
+                  
             <tr>
-                <td>2</td>
-                <td>Kuda</td>
-                <td><img src="{!! asset('images/bg_admin.png') !!}" width="150"  class="img-fluid" alt="Responsive image"></td>
-                <td><textarea readonly   class="form-control" id="exampleFormControlTextarea1" rows="3" >Merupakan Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dolores ex animi cupiditate deserunt accusantium consequuntur ab. Repudiandae atque laborum officia ipsa possimus libero rerum quam nostrum eaque! Laborum, magni!</textarea></td>
+     
+                <td>1</td>
+                <td>Oleh - Oleh</td>
+                <td>Pisau</td>
+                <td><img src=""  class="img-fluid" alt="image Oleh2"></td>
+                <td><textarea readonly class="form-control" id="exampleFormControlTextarea1" rows="3" >Merupakan Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dolores ex animi cupiditate deserunt accusantium consequuntur ab. Repudiandae atque laborum officia ipsa possimus libero rerum quam nostrum eaque! Laborum, magni!</textarea></td>
+                <td>Rp.10.000</td>
+                <td>Rp.15.000</td>
+                
                 <td> <div class="d-grid gap-2 d-md-block"> <button class="btn btn-success">Ubah</button>  <button class="btn btn-danger ">Hapus</button></div>  </td>
-      
               </tr>
       
             
@@ -80,27 +92,43 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="text-center modal-title" id="staticBackdropLabel ">Tambah Data Wahana</h5>
+          <h5 class="text-center modal-title" id="staticBackdropLabel ">Tambah Data UMKM</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <form>
-                
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Nama Wahana</label>
+                  <label for="exampleInputEmail1" class="form-label">Jenis UMKM</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option value="1">Oleh2</option>
+                    <option value="2">Wisata Malam</option>
+                    <option value="3">Cewek</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Nama Barang</label>
                   <input type="text" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Gambar Wahana</label>
+                    <label for="exampleInputPassword1" class="form-label">Gambar Barang</label>
                     <input type="file" class="form-control">
                   </div>
 
                   <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Deskripsi Wahana</label>
+                    <label for="exampleInputPassword1" class="form-label">Keterangan Barang</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
 
-    
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Harga Terendah</label>
+                    <input type="number" class="form-control">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Harga Tertinggi</label>
+                    <input type="number" class="form-control">
+                  </div>
+
               </form>
         </div>
         <div class="modal-footer">
@@ -110,5 +138,4 @@
       </div>
     </div>
   </div>
-
 @endsection

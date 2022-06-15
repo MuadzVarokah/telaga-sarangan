@@ -26,4 +26,14 @@ class AdminController extends Controller
     {
         return view('umkm_admin');
     }
+
+    public function item_umkm_admin()
+    {
+        return view('item_umkm');
+    }
+
+    public function data_pengunjung()
+    {
+        return view('data_pegunjung');
+    }
 }
