@@ -49,6 +49,7 @@ Route::post('/pesan', [TiketController::class, 'pesan']);
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/tiket', [AdminController::class, 'tiket']);
 Route::get('/admin/wahana', [AdminController::class, 'wahana']);
+Route::get('/admin/umkm_admin', [AdminController::class, 'umkm_admin']);
 
 Route::get('/umkm/{id}', 'App\Http\Controllers\UmkmController@data');
 
