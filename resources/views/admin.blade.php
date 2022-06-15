@@ -33,7 +33,13 @@
                         <div class="card-body">
                         <div class="row" >
                           <div class="col-md-6">
-                            <h5 class="card-title">33.98%</h5>
+                          @php 
+                          $prc_kunj ="No data" ;
+                          if($before != 0){
+                            $prc_kunj =100/$before*($after - $before) + "%";
+                          }
+                          @endphp
+                            <h5 class="card-title">{{$prc_kunj}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Pengunjung</h6>
                           </div>
                           <div class="col-md">
@@ -96,16 +102,24 @@
                           <th>Pembayaran</th>
                           <th>Kategori</th>
                           <th>Tanggal Pembelian</th>
+                          <th>Tanggal Kunjungan</th>
                         </tr>
                         @foreach($terjual as $terjual)
                         <tr>
+                          @php
+                          $metode = $terjual->jenis_pembayaran;
+                          if ($terjual->jenis_pembayaran == null) {
+                              $metode = 'ERR';
+                          }
+                          @endphp
                           <td>{{$terjual->id_tiket}}</td>
                           <!-- <td>Mamonir <br> <div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td> -->
                           <td>{{$terjual->name}}</td>
-                          <td>14</td>
-                          <td>ShopeePay</td>
-                          <td>Dewasa</td>
-                          <td>19 Agustus 1945</td>
+                          <td>{{$terjual->jumlah_tiket}}</td>
+                          <td>{{$terjual->jenis_pembayaran}}</td>
+                          <td>{{$terjual->nama}}</td>
+                          <td>{{$terjual->waktu_beli}}</td>
+                          <td>{{$terjual->waktu_kunjungan}}</td>
   
                         </tr>
                         @endforeach
