@@ -21,4 +21,9 @@ class AdminController extends Controller
     {
         return view('wahana');
     }
+
+    public function umkm_admin()
+    {
+        return view('umkm_admin');
+    }
 }
