@@ -84,7 +84,7 @@
                         <i class="material-icons">domain</i> <span id="side_item" class="ms-1 d-none d-sm-inline">UMKM</span> </a>
                       <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                           <li class="w-100">
-                              <a href="#" class="nav-link px-0"> <span id="side_item" style="color: #808080" class="d-none d-sm-inline">Item</span>  </a>
+                              <a href="/admin/umkm_admin" class="nav-link px-0"> <span id="side_item" style="color: #808080" class="d-none d-sm-inline">List UMKM</span>  </a>
                           </li>
                           <li>
                               <a href="#" class="nav-link px-0"> <span id="side_item" style="color: #808080" class="d-none d-sm-inline">Item</span> </a>
