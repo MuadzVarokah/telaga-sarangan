@@ -52,6 +52,7 @@ Route::get('/admin/wahana', [AdminController::class, 'wahana']);
 Route::get('/admin/umkm_admin', [AdminController::class, 'umkm_admin']);
 Route::get('/admin/item_umkm_admin', [AdminController::class, 'item_umkm_admin']);
 Route::get('/admin/data_pengunjung', [AdminController::class, 'data_pengunjung']);
+Route::get('/aduansaran', 'App\Http\Controllers\AduanController@index');
 
 Route::get('/umkm/{id}', 'App\Http\Controllers\UmkmController@data');
 
