@@ -11,12 +11,12 @@
 
                   <div class="row">
                     <div class="col-md-3 mt-3">
-                      <div class="cards rounded-3" style="width: 18rem;">
+                      <div class="cards rounded-3" style="width: 99%;">
                         <div style="background: #775DA6" class="card-header"></div>
                         <div class="card-body">
                         <div class="row" >
                           <div class="col-md-6">
-                            <h5 class="card-title">456</h5>
+                            <h5 class="card-title">{{$htgumkm}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">UMKM</h6>
                           </div>
                           <div class="col-md-6">
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="col-md-3 mt-3">
-                      <div class="cards rounded-3" style="width: 18rem;">
+                      <div class="cards rounded-3" style="width: 99%;">
                         <div style="background: #70B6C1" class="card-header"></div>
                         <div class="card-body">
                         <div class="row" >
@@ -46,12 +46,12 @@
 
 
                     <div class="col-md-3 mt-3">
-                      <div class="cards rounded-3" style="width: 18rem;">
+                      <div class="cards rounded-3" style="width: 99%;">
                         <div style="background: #F9837C" class="card-header"></div>
                         <div class="card-body">
                         <div class="row" >
                           <div class="col-md-6">
-                            <h5 class="card-title">435</h5>
+                            <h5 class="card-title">{{$jumlah}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Tiket Terjual</h6>
                           </div>
                           <div class="col-md">
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="col-md-3 mt-3">
-                      <div class="cards rounded-3" style="width: 18rem;">
+                      <div class="cards rounded-3" style="width: 99%;">
                         <div style="background: #F3CC5C" class="card-header"></div>
                         <div class="card-body">
                         <div class="row" >
@@ -90,54 +90,26 @@
                         <tr>
   
                           <th>No</th>
-                          <th>Username & Email</th>
+                          <!--<th>Username & Email</th>-->
+                          <th>Username</th>
                           <th>Jumlah</th>
                           <th>Pembayaran</th>
                           <th>Kategori</th>
                           <th>Tanggal Pembelian</th>
                         </tr>
-  
+                        @foreach($terjual as $terjual)
                         <tr>
-                          <td>1</td>
-                          <td>Mamonir <br> <div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
+                          <td>{{$terjual->id_tiket}}</td>
+                          <!-- <td>Mamonir <br> <div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td> -->
+                          <td>{{$terjual->name}}</td>
                           <td>14</td>
                           <td>ShopeePay</td>
                           <td>Dewasa</td>
                           <td>19 Agustus 1945</td>
   
                         </tr>
-  
-                        <tr>
-                          <td>2</td>
-                          <td>Mamonir <br><div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
-                          <td>14</td>
-                          <td>ShopeePay</td>
-                          <td>Dewasa</td>
-                          <td>19 Agustus 1945</td>
-  
-                        </tr>
-  
-  
-                        <tr>
-                          <td>3</td>
-                          <td>Mamonir <br><div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
-                          <td>14</td>
-                          <td>ShopeePay</td>
-                          <td>Dewasa</td>
-                          <td>19 Agustus 1945</td>
-  
-                        </tr>
-  
-                        <tr>
-                          <td>4</td>
-                          <td>Mamonir <br><div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td>
-                          <td>14</td>
-                          <td>ShopeePay</td>
-                          <td>Dewasa</td>
-                          <td>19 Agustus 1945</td>
-  
-                        </tr>
-  
+                        @endforeach
+                
                       </table>
                     </div>
                   </div>

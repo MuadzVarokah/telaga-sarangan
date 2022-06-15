@@ -3,13 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin');
+        $tiket = DB::table('tiket')->get();
+        $hitung = DB::table('tiket')->where('status','sudah dibayar')->pluck('jumlah_tiket');
+        $jumlah = $hitung->sum();
+        $terjual = DB::table('tiket')
+        ->join('users','users.id','=','tiket.id_user')
+        ->where('status','sudah dibayar')
+        ->get();
+        $htgumkm = DB::table('umkm')->count();
+        //dd($terjual);
+        return view('admin',compact('tiket','jumlah','terjual','htgumkm'));
     }
 
     public function tiket()

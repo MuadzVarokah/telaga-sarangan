@@ -69,9 +69,11 @@ class LoginController extends Controller
         ->distinct()
         ->get();
         $wahana = $wahana->unique('deskripsi');
+        $kat = DB::table('kat_umkm')
+        ->get();
         //$wahana = array_slice($wahana->values()->all(), 0, 5, true);
         //dd($wahana);
-        return view('index',compact('riwayat','wahana','count'));
+        return view('index',compact('riwayat','wahana','count','kat'));
     }
 
     public function admin(Request $request)
