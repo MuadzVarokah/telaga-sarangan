@@ -481,7 +481,24 @@
 
     </section>
     {{-- end konten tiket --}}
-
+    <!-- <section class="iq-feature1 overview-block-ptb grey-bg">
+        <div class="container">
+            </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
+                    <a href="/aduansaran">
+                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
+                            <div>
+                                <i class="ion-chatbubble-working iq-mb-10"></i>
+                                <h5 class="iq-tw-6 iq-pb-10">Aduan & Saran</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+     -->
+    <!-- <div a href="/aduansaran" class="d-grid gap-2 d-md-block mt-3"> <button class="btn btn-primary">Aduan Dan Saran <b>+</b></button> </div> -->
 
     {{-- Konten UMKM --}}
 
@@ -623,6 +640,7 @@
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">AMMONIR</h6>
                     <p>Kami Membantu wisata anda, dimanapun dan kapanpun.</p>
                 </div>
+                
                 <!-- <div class="col-md-6">
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Contact Us</h6>
                     <div class="row">
