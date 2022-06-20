@@ -481,24 +481,7 @@
 
     </section>
     {{-- end konten tiket --}}
-    <!-- <section class="iq-feature1 overview-block-ptb grey-bg">
-        <div class="container">
-            </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 iq-mtb-15">
-                    <a href="/aduansaran">
-                        <div class="iq-blog text-left iq-ptb-30 iq-pr-30 iq-pl-30">
-                            <div>
-                                <i class="ion-chatbubble-working iq-mb-10"></i>
-                                <h5 class="iq-tw-6 iq-pb-10">Aduan & Saran</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-     -->
-    <!-- <div a href="/aduansaran" class="d-grid gap-2 d-md-block mt-3"> <button class="btn btn-primary">Aduan Dan Saran <b>+</b></button> </div> -->
+  
 
     {{-- Konten UMKM --}}
 
@@ -630,15 +613,26 @@
                             Copyright @
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> AMMONIR All Rights Reserved
+                            </script> MAMONIR All Rights Reserved
                         </div>
                     </div>
 
                 </div>
 
                 <div class="col-md-4">
-                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">AMMONIR</h6>
+                    <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">MAMONIR</h6>
                     <p>Kami Membantu wisata anda, dimanapun dan kapanpun.</p>
+
+                    <form>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label text-white">Saran dan Aduan</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+
+                          <input type="button" class="btn btn-primary" value="Kirim saran dan aduan">
+
+                    </form>
                 </div>
                 
                 <!-- <div class="col-md-6">
