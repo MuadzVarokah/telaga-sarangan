@@ -116,7 +116,6 @@
                           <i class="material-icons">domain</i> <span id="side_item" class="ms-1 d-none d-sm-inline">UMKM</span></a>
                     </li> --}}
 
-
                     <li class="nav-item">
                         <a href="/admin/data_pengunjung" class="nav-link px-0 align-middle">
                             <i class="material-icons">assignment</i> <span id="side_item"
@@ -130,28 +129,13 @@
                                 class="ms-1 d-none d-sm-inline">Info Wahana</span></a>
                     </li>
 
+                    {{-- <li class="nav-item">
+                        <a href="/admin/aduan_admin" class="nav-link px-0 align-middle">
+                            <i class="material-icons">mail</i> <span id="side_item"
+                                class="ms-1 d-none d-sm-inline">Saran dan Aduan</span></a>
+                    </li> --}}
 
-                    <li class="nav-item">
-                      <a href="/admin/data_pengunjung" class="nav-link px-0 align-middle">
-                        <i class="material-icons">assignment</i>  <span id="side_item" class="ms-1 d-none d-sm-inline">Data Pengunjung</span></a>
-                  </li>
-
-                  
-                  <li class="nav-item">
-                    <a href="/admin/wahana" class="nav-link px-0 align-middle">
-                      <i class="material-icons">event_note</i> <span id="side_item" class="ms-1 d-none d-sm-inline">Info Wahana</span></a>
-                </li>
-
-                
-                <li class="nav-item">
-                  <a href="/admin/aduan_admin" class="nav-link px-0 align-middle">
-                    <i class="material-icons">mail</i> <span id="side_item" class="ms-1 d-none d-sm-inline">Saran dan Aduan</span></a>
-              </li>
-
-
-                      
-                     
-                      {{-- <li>
+                    {{-- <li>
                           <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
                               <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
                           <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
@@ -191,7 +175,6 @@
             </div>
         </div>
         <div class="col">
-
             <nav id="bar" class="navbar navbar-light" style=" padding-bottom: 10px;">
                 <div class="container-fluid">
                     <a class="navbar-brand"></a>
@@ -215,27 +198,14 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="row" style="width: 100%">
-                    <div class="col"></div>
-                    <div class="col text-end">
-                        <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30"
-                            class="rounded-circle">
-                    </div>
-                    <div class="col-2 text-end">
-                        Admin
-                    </div>
-                </div> --}}
             </nav>
 
             <div style="margin-left: 2%;margin-right: 5%" class="col py-3 ">
                 <div class="container-fluid">
                     @yield('konten')
-
                 </div>
             </div>
-
         </div>
-
     </div>
     </div>
 
@@ -246,13 +216,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
--->
 </body>
 
 </html>

@@ -60,11 +60,25 @@ Route::post('/admin/umkm_admin/update/{id}', [AdminController::class, 'update_ka
 Route::get('/admin/umkm_admin/hapus/{id}', [AdminController::class, 'hapus_kat_umkm']);
 
 Route::get('/admin/item_umkm_admin', [AdminController::class, 'item_umkm_admin']);
+Route::get('/admin/item_umkm_admin/simpan', [AdminController::class, 'simpan_item_umkm']);
+Route::post('/admin/item_umkm_admin/tambah', [AdminController::class, 'tambah_item_umkm']);
+Route::get('/admin/item_umkm_admin/ubah/{id}', [AdminController::class, 'ubah_item_umkm']);
+Route::post('/admin/item_umkm_admin/update/{id}', [AdminController::class, 'update_item_umkm']);
+Route::get('/admin/item_umkm_admin/hapus/{id}', [AdminController::class, 'hapus_item_umkm']);
 
 Route::get('/admin/data_pengunjung', [AdminController::class, 'data_pengunjung']);
-Route::get('/admin/aduan_admin', [AdminController::class, 'aduan_admin']);
+Route::get('/admin/data_pengunjung/ubah/{id}', [AdminController::class, 'ubah_pengunjung']);
+Route::post('/admin/data_pengunjung/update/{id}', [AdminController::class, 'update_pengunjung']);
+Route::get('/admin/data_pengunjung/hapus/{id}', [AdminController::class, 'hapus_pengunjung']);
 
 Route::get('/admin/wahana', [AdminController::class, 'wahana']);
+Route::get('/admin/wahana/simpan', [AdminController::class, 'simpan_wahana']);
+Route::post('/admin/wahana/tambah', [AdminController::class, 'tambah_wahana']);
+Route::get('/admin/wahana/ubah/{id}', [AdminController::class, 'ubah_wahana']);
+Route::post('/admin/wahana/update/{id}', [AdminController::class, 'update_wahana']);
+Route::get('/admin/wahana/hapus/{id}', [AdminController::class, 'hapus_wahana']);
+
+Route::get('/admin/aduan_admin', [AdminController::class, 'aduan_admin']);
 
 Route::get('/aduansaran', 'App\Http\Controllers\AduanController@index');
 

@@ -1,82 +1,81 @@
 @extends('template_admin')
 @section('konten')
+    <style>
+        .btn-success {
+            background-color: #59BCFF;
+            border: none;
+        }
 
-<style>
-    .btn-success {
-        background-color: #59BCFF;
-        border:none;
-    }
+        .btn-success:hover {
+            background-color: #1c557a;
+        }
 
-    .btn-success:hover {
-        background-color: #1c557a;
-    }
+        .btn-success:focus {
+            background-color: #1c557a;
+            border: none;
+        }
 
-    .btn-success:focus {
-        background-color: #1c557a;
-        border:none;
-    }
+        .btn-primary {
+            background-color: #5993ff;
+            border: none;
+        }
 
-    .btn-primary {
-        background-color: #5993ff;
-        border:none;
-    }
+        .btn-primary:hover {
+            background-color: rgb(20, 62, 90);
+        }
 
-    .btn-primary:hover {
-        background-color: rgb(20, 62, 90);
-    }
+        .btn-primary:focus {
+            background-color: rgb(20, 62, 90);
+            border: none;
+        }
+    </style>
 
-    .btn-primary:focus {
-        background-color: rgb(20, 62, 90);
-        border:none;
-    }
-</style>
+    <div style="padding: 2%" class="cards mt-2 rounded-3">
+        <h3 id="judul">Wahana</h3>
+        <h6 class="card-subtitle mb-2 text-muted">Tabel Data Informasi Wahana</h6>
 
-<div style="padding: 2%" class="cards mt-2 rounded-3">
-    <h3 id="judul" >Wahana</h3>
-    <h6 class="card-subtitle mb-2 text-muted">Tabel Data Informasi Wahana</h6>
+        <div class="d-grid gap-2 d-md-block mt-3"><a class="btn btn-primary" role="button"
+                href="{{ url('admin/wahana/simpan') }}">Tambah</a> </div>
 
-    <div class="d-grid gap-2 d-md-block mt-3"> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahModal">
-        Tambah
-      </button> </div>
+        <div class="table-responsive">
+            <table class="table table-hover mt-2 text-center">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Gambar</th>
+                    <th>Deskripsi</th>
+                    <th class="">Aksi</th>
+                </tr>
 
-    <div class="table-responsive">
-        <table class="table table-hover mt-2 text-center">
-            <tr>
-      
-              <th>No</th>
-              <th>Nama</th>
-              <th>Gambar</th>
-              <th>Deskripsi</th>
-              <th class="">Aksi</th>
-      
-            </tr>
-      
-            <tr>
-              <td>1</td>
-              <td>Speedboat</td>
-              <td><img src="{!! asset('images/bg_admin.png') !!}" width="150"  class="img-fluid" alt="Responsive image"></td>
-              <td><textarea readonly class="form-control" id="exampleFormControlTextarea1" rows="3" >Merupakan Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dolores ex animi cupiditate deserunt accusantium consequuntur ab. Repudiandae atque laborum officia ipsa possimus libero rerum quam nostrum eaque! Laborum, magni!</textarea></td>
-              <td> <div class="d-grid gap-2 d-md-block"> <button class="btn btn-success">Ubah</button>  <button class="btn btn-danger ">Hapus</button></div>  </td>
-    
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Kuda</td>
-                <td><img src="{!! asset('images/bg_admin.png') !!}" width="150"  class="img-fluid" alt="Responsive image"></td>
-                <td><textarea readonly   class="form-control" id="exampleFormControlTextarea1" rows="3" >Merupakan Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio dolores ex animi cupiditate deserunt accusantium consequuntur ab. Repudiandae atque laborum officia ipsa possimus libero rerum quam nostrum eaque! Laborum, magni!</textarea></td>
-                <td> <div class="d-grid gap-2 d-md-block"> <button class="btn btn-success">Ubah</button>  <button class="btn btn-danger ">Hapus</button></div>  </td>
-      
-              </tr>
-      
-            
-      
-          </table>
+                @php $count=0; @endphp
+                @foreach ($wahana as $wahana)
+                    @php $count++; @endphp
+                    <tr>
+                        <td>{{ $count }}</td>
+                        <td>{{ $wahana->nama }}</td>
+                        <td>
+                            <img src="{!! asset('images/' . $wahana->gambar . '') !!}" class="img-fluid" alt="{{ $wahana->nama }}"
+                                style="max-height: 115px; max-width: 200px">
+                        </td>
+                        <td>
+                            <textarea readonly class="form-control" rows="4">{{ $wahana->deskripsi }}</textarea>
+                        </td>
+                        <td>
+                            <div class="d-grid gap-2 d-md-block">
+                                <a class="btn btn-success" role="button"
+                                    href="wahana/ubah/{{ $wahana->id_wahana }}">Ubah</a>
+                                <a class="btn btn-danger" role="button" href="wahana/hapus/{{ $wahana->id_wahana }}"
+                                    onclick="return confirm('Apakah anda yakin ingin menghapus data?');">Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
     </div>
-    
-  </div>
 
-  <!-- Modal -->
-<div class="modal fade" id="tambahModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- Modal -->
+    {{-- <div class="modal fade" id="tambahModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -85,7 +84,6 @@
         </div>
         <div class="modal-body">
             <form>
-                
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Nama Wahana</label>
                   <input type="text" class="form-control">
@@ -94,13 +92,10 @@
                     <label for="exampleInputPassword1" class="form-label">Gambar Wahana</label>
                     <input type="file" class="form-control">
                   </div>
-
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Deskripsi Wahana</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
-
-    
               </form>
         </div>
         <div class="modal-footer">
@@ -109,6 +104,5 @@
         </div>
       </div>
     </div>
-  </div>
-
+  </div> --}}
 @endsection

@@ -34,7 +34,6 @@
         <h3 id="judul">Daftar UMKM</h3>
         <h6 class="card-subtitle mb-2 text-muted">Tabel Data Informasi Daftar UMKM</h6>
 
-
         <div class="d-grid gap-2 d-md-block mt-3"><a class="btn btn-primary" role="button"
                 href="{{ url('admin/item_umkm_admin/simpan') }}">Tambah</a> </div>
 
@@ -69,8 +68,10 @@
                         <td>Rp. {{ number_format($item->harga_tertinggi, 2, ',', '.') }}</td>
                         <td>
                             <div class="d-grid gap-2 d-md-block">
-                                <button class="btn btn-success">Ubah</button>
-                                <button class="btn btn-danger ">Hapus</button>
+                                <a class="btn btn-success" role="button"
+                                    href="item_umkm_admin/ubah/{{ $item->id_umkm }}">Ubah</a>
+                                <a class="btn btn-danger" role="button" href="item_umkm_admin/hapus/{{ $item->id_umkm }}"
+                                    onclick="return confirm('Apakah anda yakin ingin menghapus data?');">Hapus</a>
                             </div>
                         </td>
                     </tr>

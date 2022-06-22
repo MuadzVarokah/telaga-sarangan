@@ -508,8 +508,7 @@
                             <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
                                 <img src="{!! asset('images/'.$kat->gambar.'') !!}" class="card-img-top" alt="UMKM_{{$kat->nama}}">
                                 <div class="card-body">
-                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">Oleh
-                                        - Oleh</p>
+                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">{{$kat->nama}}</p>
                                 </div>
                             </div>
                         </a>
