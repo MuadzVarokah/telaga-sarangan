@@ -57,4 +57,9 @@ class AdminController extends Controller
     {
         return view('data_pegunjung');
     }
+
+    public function aduan_admin()
+    {
+        return view('aduan_admin');
+    }
 }

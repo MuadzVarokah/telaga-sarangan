@@ -501,7 +501,7 @@
 
                 <div class="row align-items-start">
                 @foreach ($kat as $kat)
-                    <div class="col-md-4"> 
+                    <div class="col-md-4"> a
                         {{-- start --}}
                         <a style="text-decoration: none;" href="{{ url('umkm') }}/ {{ $kat->id_kat_umkm }}">
 

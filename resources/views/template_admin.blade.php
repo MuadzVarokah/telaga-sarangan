@@ -111,7 +111,7 @@
 
                 
                 <li class="nav-item">
-                  <a href="#" class="nav-link px-0 align-middle">
+                  <a href="/admin/aduan_admin" class="nav-link px-0 align-middle">
                     <i class="material-icons">mail</i> <span id="side_item" class="ms-1 d-none d-sm-inline">Saran dan Aduan</span></a>
               </li>
 
