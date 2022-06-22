@@ -1,11 +1,13 @@
                 @extends('template_admin')
                  @section('konten')
-                 
-                 <img src="{!! asset('images/bg_admin.png') !!}"  class="img-fluid" alt="Responsive image">
 
-                  {{-- hai --}}
-                  <h3 class="mt-3" id="judul">Hai, {{ auth()->user()->name }}</h3>
-                  <p id="judul" style="color: #bfbcbc" >Selamat datang di dashboard admin Go Telaga Sarangan</p>
+                    {{-- hai --}}
+                     <h3 class="mt-3" id="judul">Hai, {{ auth()->user()->name }}</h3>
+                     <p id="judul" style="color: #bfbcbc" >Selamat datang di dashboard admin Go Telaga Sarangan</p>
+                 
+                 <img src="{!! asset('images/bg_admin.png') !!}" width="1350"  class="img-fluid" alt="Responsive image">
+
+
 
                   {{-- Card --}}
 

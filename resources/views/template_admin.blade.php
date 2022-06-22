@@ -98,8 +98,8 @@
                     <li>
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="material-icons">domain</i> <span id="side_item"
-                                class="ms-1 d-none d-sm-inline">UMKM</span> </a>
-                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                class="ms-1 d-none d-sm-inline">UMKM</span></a>
+                        <ul class="collapse" id="submenu1" data-bs-parent="#menu">
                             <li class="w-100">
                                 <a href="/admin/umkm_admin" class="nav-link px-0"> <span id="side_item"
                                         style="color: #808080" class="d-none d-sm-inline">Jenis UMKM</span> </a>
