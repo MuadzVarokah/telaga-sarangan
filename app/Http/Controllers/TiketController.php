@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Tiket;
@@ -29,12 +30,8 @@ class TiketController extends Controller
             'id_harga_tiket' => 'required',
         ]);
 
-
-        // $harga_tiket = 1;
-        // $hari = date('D', strtotime($request->waktu_kunjungan));
-        // if($hari == ('Sat' || 'Sun')) {
-        //     $harga_tiket = 2;
-        // };   
+        $kunjungan = date_create($validatedData['waktu_kunjungan']);
+        $validatedData['waktu_kunjungan'] = date_format($kunjungan, 'Y-m-d H:i:01');
 
         Tiket::create($validatedData);
 

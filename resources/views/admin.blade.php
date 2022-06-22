@@ -4,7 +4,7 @@
                  <img src="{!! asset('images/bg_admin.png') !!}"  class="img-fluid" alt="Responsive image">
 
                   {{-- hai --}}
-                  <h3 class="mt-3" id="judul">Hai, MAMONIR</h3>
+                  <h3 class="mt-3" id="judul">Hai, {{ auth()->user()->name }}</h3>
                   <p id="judul" style="color: #bfbcbc" >Selamat datang di dashboard admin Go Telaga Sarangan</p>
 
                   {{-- Card --}}
@@ -104,22 +104,27 @@
                           <th>Tanggal Pembelian</th>
                           <th>Tanggal Kunjungan</th>
                         </tr>
+                        @php $count=0; @endphp
                         @foreach($terjual as $terjual)
                         <tr>
                           @php
+                          $count++;
                           $metode = $terjual->jenis_pembayaran;
                           if ($terjual->jenis_pembayaran == null) {
                               $metode = 'ERR';
                           }
                           @endphp
-                          <td>{{$terjual->id_tiket}}</td>
+                          <td>{{$count}}</td>
                           <!-- <td>Mamonir <br> <div class="card-subtitle mb-2 text-muted">Mamonir gmail com</div></td> -->
                           <td>{{$terjual->name}}</td>
                           <td>{{$terjual->jumlah_tiket}}</td>
                           <td>{{$terjual->jenis_pembayaran}}</td>
                           <td>{{$terjual->nama}}</td>
                           <td>{{$terjual->waktu_beli}}</td>
-                          <td>{{$terjual->waktu_kunjungan}}</td>
+                          @php
+                          $kunjungan = new DateTime($terjual->waktu_kunjungan);
+                          @endphp
+                          <td>{{date_format($kunjungan, 'Y-m-d')}}</td>
   
                         </tr>
                         @endforeach

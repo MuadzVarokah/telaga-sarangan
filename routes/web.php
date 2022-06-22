@@ -47,12 +47,25 @@ Route::post('/pesan', [TiketController::class, 'pesan']);
 
 // Admin
 Route::get('/admin', [AdminController::class, 'index']);
+
 Route::get('/admin/tiket', [AdminController::class, 'tiket']);
-Route::get('/admin/wahana', [AdminController::class, 'wahana']);
+Route::get('/admin/tiket/ubah/{id}', [AdminController::class, 'ubah_tiket']);
+Route::post('/admin/tiket/update/{id}', [AdminController::class, 'update_tiket']);
+
 Route::get('/admin/umkm_admin', [AdminController::class, 'umkm_admin']);
+Route::get('/admin/umkm_admin/simpan', [AdminController::class, 'simpan_kat_umkm']);
+Route::post('/admin/umkm_admin/tambah', [AdminController::class, 'tambah_kat_umkm']);
+Route::get('/admin/umkm_admin/ubah/{id}', [AdminController::class, 'ubah_kat_umkm']);
+Route::post('/admin/umkm_admin/update/{id}', [AdminController::class, 'update_kat_umkm']);
+Route::get('/admin/umkm_admin/hapus/{id}', [AdminController::class, 'hapus_kat_umkm']);
+
 Route::get('/admin/item_umkm_admin', [AdminController::class, 'item_umkm_admin']);
+
 Route::get('/admin/data_pengunjung', [AdminController::class, 'data_pengunjung']);
 Route::get('/admin/aduan_admin', [AdminController::class, 'aduan_admin']);
+
+Route::get('/admin/wahana', [AdminController::class, 'wahana']);
+
 Route::get('/aduansaran', 'App\Http\Controllers\AduanController@index');
 
 Route::get('/umkm/{id}', 'App\Http\Controllers\UmkmController@data');
