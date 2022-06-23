@@ -67,11 +67,12 @@
                 <img src="{!! asset('images/' . $umkm->gambar . '') !!}" alt={{ $umkm->barang }}
                 style="max-height: 200px">
                 <p>{{ $umkm->gambar }}</p>
+                <input type="hidden" class="form-control" name="gambar_lama" value="{{ $umkm->gambar }}">
             </div>
             <div class="mb-3">
                 <label for="gambar" class="form-label">Gambar</label>
                 <input class="form-control @error('gambar') is-invalid @enderror" type="file" id="gambar"
-                    name="gambar" required>
+                    name="gambar">
                 @error('gambar')
                     <div class="invalid-feedback">
                         {{ $message }}

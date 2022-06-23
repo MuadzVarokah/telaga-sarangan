@@ -43,6 +43,8 @@
                     <th>No</th>
                     <th>Nama</th>
                     <th>Gambar</th>
+                    <th>Harga 1</th>
+                    <th>Harga 2</th>
                     <th>Deskripsi</th>
                     <th class="">Aksi</th>
                 </tr>
@@ -56,6 +58,16 @@
                         <td>
                             <img src="{!! asset('images/' . $wahana->gambar . '') !!}" class="img-fluid" alt="{{ $wahana->nama }}"
                                 style="max-height: 115px; max-width: 200px">
+                        </td>
+                        <td>
+                            {{ $wahana->nama_harga }}<br>Rp. {{ $wahana->harga }}.000
+                        </td>
+                        <td>
+                            <?php if($wahana->harga2 != null) {?>
+                                {{ $wahana->nama_harga2 }}<br>Rp. {{ $wahana->harga2 }}.000
+                            <?php } else {?>
+                                -
+                            <?php } ?>
                         </td>
                         <td>
                             <textarea readonly class="form-control" rows="4">{{ $wahana->deskripsi }}</textarea>

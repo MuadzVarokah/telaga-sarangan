@@ -51,6 +51,8 @@ Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/tiket', [AdminController::class, 'tiket']);
 Route::get('/admin/tiket/ubah/{id}', [AdminController::class, 'ubah_tiket']);
 Route::post('/admin/tiket/update/{id}', [AdminController::class, 'update_tiket']);
+Route::get('/admin/data_tiket/setujui/{id}', [AdminController::class, 'setujui_data_tiket']);
+Route::get('/admin/data_tiket/hapus/{id}', [AdminController::class, 'hapus_data_tiket']);
 
 Route::get('/admin/umkm_admin', [AdminController::class, 'umkm_admin']);
 Route::get('/admin/umkm_admin/simpan', [AdminController::class, 'simpan_kat_umkm']);

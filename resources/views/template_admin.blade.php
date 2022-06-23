@@ -186,8 +186,8 @@
                                 data-bs-toggle="dropdown" aria-expanded="false"
                                 style="color:#202020">{{ auth()->user()->name }}</a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#" style="padding-left: 20%">Profil</a>
-                                <hr class="dropdown-divider">
+                                {{-- <a class="dropdown-item" href="#" style="padding-left: 20%">Profil</a>
+                                <hr class="dropdown-divider"> --}}
                                 <a class="dropdown-item" href="#">
                                     <form action="/logout" method="post">
                                         @csrf

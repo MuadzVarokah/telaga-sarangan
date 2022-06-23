@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\HargaTiket;
+use App\Models\Tiket;
 use App\Models\KatUMKM;
 use App\Models\UMKM;
 use App\Models\User;
@@ -43,7 +44,14 @@ class AdminController extends Controller
     public function tiket()
     {
         $harga_tiket = DB::table('harga_tiket')->get();
-        return view('tiket', compact('harga_tiket'));
+        $tiket = DB::table('tiket')
+            ->join('users', 'users.id', '=', 'tiket.id_user')
+            ->join('harga_tiket', 'harga_tiket.id_harga_tiket', '=', 'tiket.id_harga_tiket')
+            ->select('tiket.*', 'users.name', 'harga_tiket.*')
+            ->where('status', 'belum dibayar')
+            ->latest('id_tiket')->paginate(5);
+        // dd($tiket);
+        return view('tiket', ['harga_tiket' => $harga_tiket, 'tiket' => $tiket]);
     }
 
     public function ubah_tiket($id)
@@ -59,7 +67,22 @@ class AdminController extends Controller
         $harga_tiket->harga    = $request->harga;
         $harga_tiket->save();
 
-        return redirect('/admin/tiket')->with('success',' Data telah diperbaharui!');
+        return redirect('/admin/tiket')->with('success', ' Data telah diperbaharui!');
+    }
+
+    public function setujui_data_tiket($id)
+    {
+        $tiket           = Tiket::find($id);
+        $tiket->status   = 'sudah dibayar';
+        $tiket->save();
+
+        return redirect('/admin/tiket')->with('success', ' Tiket telah disetujui!');
+    }
+
+    public function hapus_data_tiket($id)
+    {
+        DB::table('tiket')->where('id_tiket', $id)->delete();
+        return redirect('/admin/tiket')->with('success', ' Tiket Berhasil Dihapus!');
     }
     // End Tiket
 
@@ -83,19 +106,19 @@ class AdminController extends Controller
         ]);
 
         // menyimpan data file yang diupload ke variabel $file
-	    $file = $request->file('gambar');
-	    $nama_file = time()."_".$file->getClientOriginalName();
+        $file = $request->file('gambar');
+        $nama_file = time() . "_" . $file->getClientOriginalName();
 
         // isi dengan nama folder tempat kemana file diupload
-	    $tujuan_upload = 'images';
-	    $file->move($tujuan_upload,$nama_file);
+        $tujuan_upload = 'images';
+        $file->move($tujuan_upload, $nama_file);
 
         KatUMKM::Create([
             'nama'      =>  $request->nama,
             'gambar'    =>  $nama_file,
         ]);
-        
-        return redirect('/admin/umkm_admin')->with('success',' Data berhasil ditambahkan!');
+
+        return redirect('/admin/umkm_admin')->with('success', ' Data berhasil ditambahkan!');
     }
 
     public function ubah_kat_umkm($id)
@@ -111,26 +134,31 @@ class AdminController extends Controller
             'gambar'    =>  'image|file|mimes:jpeg,png,jpg',
         ]);
 
-        // menyimpan data file yang diupload ke variabel $file
-	    $file = $request->file('gambar');
-	    $nama_file = time()."_".$file->getClientOriginalName();
+        if ($request->gambar == NULL) {
+            $gambar = $request->gambar_lama;
+        } else {
+            // menyimpan data file yang diupload ke variabel $file
+            $file = $request->file('gambar');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
 
-        // isi dengan nama folder tempat kemana file diupload
-	    $tujuan_upload = 'images';
-	    $file->move($tujuan_upload,$nama_file);
-        
+            // isi dengan nama folder tempat kemana file diupload
+            $tujuan_upload = 'images';
+            $file->move($tujuan_upload, $nama_file);
+            $gambar = $nama_file;
+        }
+
         $kat_umkm           = KatUMKM::find($id);
         $kat_umkm->nama     = $request->nama;
-        $kat_umkm->gambar   = $nama_file;
+        $kat_umkm->gambar   = $gambar;
         $kat_umkm->save();
 
-        return redirect('/admin/umkm_admin')->with('success',' Data telah diperbaharui!');
+        return redirect('/admin/umkm_admin')->with('success', ' Data telah diperbaharui!');
     }
 
     public function hapus_kat_umkm($id)
     {
         DB::table('kat_umkm')->where('id_kat_umkm', $id)->delete();
-        return redirect('/admin/umkm_admin')->with('success',' Data Berhasil Dihapus!');
+        return redirect('/admin/umkm_admin')->with('success', ' Data Berhasil Dihapus!');
     }
     // END Kategori UMKM
 
@@ -159,12 +187,12 @@ class AdminController extends Controller
         ]);
 
         // menyimpan data file yang diupload ke variabel $file
-	    $file = $request->file('gambar');
-	    $nama_file = time()."_".$file->getClientOriginalName();
+        $file = $request->file('gambar');
+        $nama_file = time() . "_" . $file->getClientOriginalName();
 
         // isi dengan nama folder tempat kemana file diupload
-	    $tujuan_upload = 'images';
-	    $file->move($tujuan_upload,$nama_file);
+        $tujuan_upload = 'images';
+        $file->move($tujuan_upload, $nama_file);
 
         UMKM::Create([
             'id_kat'            =>  $request->id_kat,
@@ -174,8 +202,8 @@ class AdminController extends Controller
             'harga_terendah'    =>  $request->harga_terendah,
             'harga_tertinggi'   =>  $request->harga_tertinggi,
         ]);
-        
-        return redirect('/admin/item_umkm_admin')->with('success',' Data berhasil ditambahkan!');
+
+        return redirect('/admin/item_umkm_admin')->with('success', ' Data berhasil ditambahkan!');
     }
 
     public function ubah_item_umkm($id)
@@ -192,29 +220,34 @@ class AdminController extends Controller
             'keterangan'    =>  'max:255',
         ]);
 
-        // menyimpan data file yang diupload ke variabel $file
-	    $file = $request->file('gambar');
-	    $nama_file = time()."_".$file->getClientOriginalName();
+        if ($request->gambar == NULL) {
+            $gambar = $request->gambar_lama;
+        } else {
+            // menyimpan data file yang diupload ke variabel $file
+            $file = $request->file('gambar');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
 
-        // isi dengan nama folder tempat kemana file diupload
-	    $tujuan_upload = 'images';
-	    $file->move($tujuan_upload,$nama_file);
-        
+            // isi dengan nama folder tempat kemana file diupload
+            $tujuan_upload = 'images';
+            $file->move($tujuan_upload, $nama_file);
+            $gambar = $nama_file;
+        }
+
         $umkm                   = UMKM::find($id);
         $umkm->barang           = $request->barang;
-        $umkm->gambar           = $nama_file;
-        $umkm->keterangan       =  $request->keterangan;
-        $umkm->harga_terendah   =  $request->harga_terendah;
-        $umkm->harga_tertinggi   =  $request->harga_tertinggi;
+        $umkm->gambar           = $gambar;
+        $umkm->keterangan       = $request->keterangan;
+        $umkm->harga_terendah   = $request->harga_terendah;
+        $umkm->harga_tertinggi  = $request->harga_tertinggi;
         $umkm->save();
 
-        return redirect('/admin/item_umkm_admin')->with('success',' Data telah diperbaharui!');
+        return redirect('/admin/item_umkm_admin')->with('success', ' Data telah diperbaharui!');
     }
 
     public function hapus_item_umkm($id)
     {
         DB::table('umkm')->where('id_umkm', $id)->delete();
-        return redirect('/admin/item_umkm_admin')->with('success',' Data Berhasil Dihapus!');
+        return redirect('/admin/item_umkm_admin')->with('success', ' Data Berhasil Dihapus!');
     }
     // END UMKM
 
@@ -238,27 +271,31 @@ class AdminController extends Controller
             'email' => 'required|email',
             'role' => 'required',
         ]);
-        
+
         $users          = User::find($id);
         $users->name    = $request->name;
         $users->email   = $request->email;
         $users->role    = $request->role;
         $users->save();
 
-        return redirect('/admin/data_pengunjung')->with('success',' Data telah diperbaharui!');
+        return redirect('/admin/data_pengunjung')->with('success', ' Data telah diperbaharui!');
     }
 
     public function hapus_pengunjung($id)
     {
         DB::table('users')->where('id', $id)->delete();
-        return redirect('/admin/data_pengunjung')->with('success',' Data Berhasil Dihapus!');
+        return redirect('/admin/data_pengunjung')->with('success', ' Data Berhasil Dihapus!');
     }
     // END Data Pengunjung
 
     // Wahana
     public function wahana()
     {
-        $wahana = DB::table('wahana')->get();
+        $wahana = DB::table('wahana')
+            ->join('harga', 'harga.id_wahana', '=', 'wahana.id_wahana')
+            ->get();
+        // dd($wahana);
+        // $wahana = DB::table('wahana')->get();
         return view('wahana', ['wahana' => $wahana]);
     }
 
@@ -276,26 +313,38 @@ class AdminController extends Controller
         ]);
 
         // menyimpan data file yang diupload ke variabel $file
-	    $file = $request->file('gambar');
-	    $nama_file = time()."_".$file->getClientOriginalName();
+        $file = $request->file('gambar');
+        $nama_file = time() . "_" . $file->getClientOriginalName();
 
         // isi dengan nama folder tempat kemana file diupload
-	    $tujuan_upload = 'images';
-	    $file->move($tujuan_upload,$nama_file);
+        $tujuan_upload = 'images';
+        $file->move($tujuan_upload, $nama_file);
 
         Wahana::Create([
             'nama'      =>  $request->nama,
             'gambar'    =>  $nama_file,
             'deskripsi' =>  $request->deskripsi,
         ]);
-        
-        return redirect('/admin/wahana')->with('success',' Data berhasil ditambahkan!');
+
+        return redirect('/admin/wahana')->with('success', ' Data berhasil ditambahkan!');
     }
 
     public function ubah_wahana($id)
     {
+        // $wahana = DB::table('wahana')
+        //     ->join('harga', 'harga.id_wahana', '=', 'wahana.id_wahana')
+        //     ->where('harga.id_wahana', $id)
+        //     ->where('wahana.id_wahana', $id)
+        //     ->get();
+        // $harga = DB::table('harga')
+        //     ->where('id_wahana', $id)
+        //     ->get();
         $wahana = Wahana::findOrFail($id);
-        return view('edit_wahana', ['wahana' => $wahana]);
+        // dd($harga);
+        return view('edit_wahana', [
+            'wahana' => $wahana,
+            // 'harga' => $harga
+        ]);
     }
 
     public function update_wahana(Request $request, $id)
@@ -306,27 +355,32 @@ class AdminController extends Controller
             'deskripsi' =>  'required',
         ]);
 
-        // menyimpan data file yang diupload ke variabel $file
-	    $file = $request->file('gambar');
-	    $nama_file = time()."_".$file->getClientOriginalName();
+        if ($request->gambar == NULL) {
+            $gambar = $request->gambar_lama;
+        } else {
+            // menyimpan data file yang diupload ke variabel $file
+            $file = $request->file('gambar');
+            $nama_file = time() . "_" . $file->getClientOriginalName();
 
-        // isi dengan nama folder tempat kemana file diupload
-	    $tujuan_upload = 'images';
-	    $file->move($tujuan_upload,$nama_file);
-        
+            // isi dengan nama folder tempat kemana file diupload
+            $tujuan_upload = 'images';
+            $file->move($tujuan_upload, $nama_file);
+            $gambar = $nama_file;
+        }
+
         $wahana             = Wahana::find($id);
         $wahana->nama       = $request->nama;
-        $wahana->gambar     = $nama_file;
+        $wahana->gambar     = $gambar;
         $wahana->deskripsi  = $request->deskripsi;
         $wahana->save();
 
-        return redirect('/admin/wahana')->with('success',' Data telah diperbaharui!');
+        return redirect('/admin/wahana')->with('success', ' Data telah diperbaharui!');
     }
 
     public function hapus_wahana($id)
     {
         DB::table('wahana')->where('id_wahana', $id)->delete();
-        return redirect('/admin/wahana')->with('success',' Data Berhasil Dihapus!');
+        return redirect('/admin/wahana')->with('success', ' Data Berhasil Dihapus!');
     }
     // END Wahana
 

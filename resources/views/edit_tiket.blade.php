@@ -31,8 +31,8 @@
     </style>
 
     <div style="padding: 2%" class="cards mt-2 rounded-3">
-        <h3 id="judul">Ubah Tiket Masuk</h3>
-        <h6 class="card-subtitle mb-2 text-muted">Ubah Informasi Tiket Masuk</h6>
+        <h3 id="judul">Ubah Harga Tiket Masuk</h3>
+        <h6 class="card-subtitle mb-2 text-muted">Ubah Informasi Harga Tiket Masuk</h6>
         <br>
         <form action="{{ url('admin/tiket/update', $harga_tiket->id_harga_tiket) }}" method="POST"
             onsubmit="return confirm('Apakah Anda Yakin?');">

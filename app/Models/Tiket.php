@@ -11,6 +11,7 @@ class Tiket extends Model
     protected $table = 'tiket';
     protected $guarded = ['id_tiket'];
     public $timestamps = false;
+    protected  $primaryKey = 'id_tiket';
     // protected $fillable = [
     //     'id_harga_tiket',
     //     'waktu_beli',

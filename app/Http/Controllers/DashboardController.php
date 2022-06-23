@@ -24,7 +24,7 @@ class DashboardController extends Controller
         $kat = DB::table('kat_umkm')
         ->get();
         //$wahana = array_slice($wahana->values()->all(), 0, 5, true);
-        //dd($wahana);
+        // dd($wahana);
         return view('index',compact('riwayat', 'wahana','kat'));
     }
 

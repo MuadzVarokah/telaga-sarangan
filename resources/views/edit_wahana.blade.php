@@ -50,11 +50,54 @@
                 <label for="gambar" class="form-label">Gambar Lama</label></br>
                 <img src="{!! asset('images/' . $wahana->gambar . '') !!}" alt={{ $wahana->nama }} style="max-height: 200px">
                 <p>{{ $wahana->gambar }}</p>
+                <input type="hidden" class="form-control" name="gambar_lama" value="{{ $wahana->gambar }}">
             </div>
+            {{-- <div class="mb-3">
+                <label for="harga1" class="form-label">Harga 1</label>
+                <div class="row">
+                    <div class="col-lg-4 col-md-5 col-sm-8 col-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="nama_harga" placeholder="Jumlah Putaran"
+                                minlength="1" maxlength="2" value="{{ $harga->nama_harga }}"
+                                onkeypress="return hanyaAngka(event)">
+                            <span class="input-group-text">x Putaran</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-8 col-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Rp.</span>
+                            <input type="text" class="form-control" name="harga" placeholder="Harga" minlength="1"
+                                maxlength="3" value="{{ $harga->harga }}" onkeypress="return hanyaAngka(event)">
+                            <span class="input-group-text">.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="harga1" class="form-label">Harga 2</label>
+                <div class="row">
+                    <div class="col-lg-4 col-md-5 col-sm-8 col-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="nama_harga2" placeholder="Jumlah Putaran"
+                                minlength="1" maxlength="2" value="{{ $harga->nama_harga2 }}"
+                                onkeypress="return hanyaAngka(event)">
+                            <span class="input-group-text">x Putaran</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-8 col-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Rp.</span>
+                            <input type="text" class="form-control" name="harga2" minlength="1" maxlength="3"
+                                value="{{ $harga->harga2 }}" onkeypress="return hanyaAngka(event)">
+                            <span class="input-group-text">.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
             <div class="mb-3">
                 <label for="gambar" class="form-label">Gambar</label>
                 <input class="form-control @error('gambar') is-invalid @enderror" type="file" id="gambar"
-                    name="gambar" required>
+                    name="gambar">
                 @error('gambar')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -63,8 +106,7 @@
             </div>
             <div class="mb-3">
                 <label for="deskripsi" class="form-label">Deskripsi</label>
-                <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi"
-                    rows="3">{{ $wahana->deskripsi }}</textarea>
+                <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" rows="3">{{ $wahana->deskripsi }}</textarea>
                 @error('deskripsi')
                     <div class="invalid-feedback">
                         {{ $message }}
