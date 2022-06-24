@@ -16,7 +16,7 @@ class DashboardController extends Controller
     {
         $riwayat = [];
         $wahana = DB::table('wahana')
-        ->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
+        //->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
         ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')
         ->distinct()
         ->get();
