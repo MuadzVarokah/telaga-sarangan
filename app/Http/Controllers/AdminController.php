@@ -291,11 +291,7 @@ class AdminController extends Controller
     // Wahana
     public function wahana()
     {
-        $wahana = DB::table('wahana')
-            ->join('harga', 'harga.id_wahana', '=', 'wahana.id_wahana')
-            ->get();
-        // dd($wahana);
-        // $wahana = DB::table('wahana')->get();
+        $wahana = DB::table('wahana')->get();
         return view('wahana', ['wahana' => $wahana]);
     }
 
@@ -307,9 +303,11 @@ class AdminController extends Controller
     public function tambah_wahana(Request $request)
     {
         $this->validate($request, [
-            'nama'      =>  'required',
-            'gambar'    =>  'image|file|mimes:jpeg,png,jpg',
-            'deskripsi' =>  'required',
+            'nama'          =>  'required',
+            'gambar'        =>  'image|file|mimes:jpeg,png,jpg',
+            'deskripsi'     =>  'required',
+            'nama_harga'    =>  'required',
+            'harga'         =>  'required',
         ]);
 
         // menyimpan data file yang diupload ke variabel $file
@@ -321,9 +319,13 @@ class AdminController extends Controller
         $file->move($tujuan_upload, $nama_file);
 
         Wahana::Create([
-            'nama'      =>  $request->nama,
-            'gambar'    =>  $nama_file,
-            'deskripsi' =>  $request->deskripsi,
+            'nama'          =>  $request->nama,
+            'gambar'        =>  $nama_file,
+            'deskripsi'     =>  $request->deskripsi,
+            'nama_harga'    =>  $request->nama_harga,
+            'harga'         =>  $request->harga,
+            'nama_harga2'   =>  $request->nama_harga2,
+            'harga2'        =>  $request->harga2,
         ]);
 
         return redirect('/admin/wahana')->with('success', ' Data berhasil ditambahkan!');
@@ -331,20 +333,8 @@ class AdminController extends Controller
 
     public function ubah_wahana($id)
     {
-        // $wahana = DB::table('wahana')
-        //     ->join('harga', 'harga.id_wahana', '=', 'wahana.id_wahana')
-        //     ->where('harga.id_wahana', $id)
-        //     ->where('wahana.id_wahana', $id)
-        //     ->get();
-        // $harga = DB::table('harga')
-        //     ->where('id_wahana', $id)
-        //     ->get();
         $wahana = Wahana::findOrFail($id);
-        // dd($harga);
-        return view('edit_wahana', [
-            'wahana' => $wahana,
-            // 'harga' => $harga
-        ]);
+        return view('edit_wahana', ['wahana' => $wahana]);
     }
 
     public function update_wahana(Request $request, $id)
@@ -353,6 +343,8 @@ class AdminController extends Controller
             'nama'      =>  'required',
             'gambar'    =>  'image|file|mimes:jpeg,png,jpg',
             'deskripsi' =>  'required',
+            'nama_harga'    =>  'required',
+            'harga'         =>  'required',
         ]);
 
         if ($request->gambar == NULL) {
@@ -368,10 +360,14 @@ class AdminController extends Controller
             $gambar = $nama_file;
         }
 
-        $wahana             = Wahana::find($id);
-        $wahana->nama       = $request->nama;
-        $wahana->gambar     = $gambar;
-        $wahana->deskripsi  = $request->deskripsi;
+        $wahana                 = Wahana::find($id);
+        $wahana->nama           = $request->nama;
+        $wahana->gambar         = $gambar;
+        $wahana->deskripsi      = $request->deskripsi;
+        $wahana->nama_harga     = $request->nama_harga;
+        $wahana->harga          = $request->harga;
+        $wahana->nama_harga2    = $request->nama_harga2;
+        $wahana->harga2         = $request->harga2;
         $wahana->save();
 
         return redirect('/admin/wahana')->with('success', ' Data telah diperbaharui!');

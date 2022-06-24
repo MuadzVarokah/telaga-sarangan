@@ -3,9 +3,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-    .container{
+    .container {
         --bs-gutter-x: 15% !important;
     }
+
     body {
         background-color: #f5fdfd;
     }
@@ -40,6 +41,7 @@
         color: #167594;
         transition: 0.5s;
     }
+
     #tiket {
         margin-top: 40px;
     }
@@ -197,8 +199,8 @@
     {{-- Alert end --}}
 
     {{-- Jumbotron --}}
-    <section class="jumbotron jumbotron-fluid bg-cover text-white iq-pt-10" 
-    style="background-image: linear-gradient(to bottom, rgba(3, 15, 29, 0.7) 50%,rgba(3, 15, 29, 0.6) 100%), url('{!! asset('images/sarangan3.png') !!}');
+    <section class="jumbotron jumbotron-fluid bg-cover text-white iq-pt-10"
+        style="background-image: linear-gradient(to bottom, rgba(3, 15, 29, 0.7) 50%,rgba(3, 15, 29, 0.6) 100%), url('{!! asset('images/sarangan3.png') !!}');
         background-size: cover; background-position: center center; background-repeat: no-repeat;">
         <div class="container">
             <center style="letter-spacing: 1px;">
@@ -241,7 +243,7 @@
                         terdapat wahana seperti menaiki kapal, menunggangi kuda. Selain itu juga Telaga Sarangan
                         menawarkan oleh - oleh dan makanan ringan yang khas
                         seperti lempeng, rengginang, jenang candi, sate kelinci, pecel pincuk, berbagai macam souvenir
-                        dan masih banyak lagi.  </p>
+                        dan masih banyak lagi. </p>
                 </div>
                 <div class="col-md-12">
                     <p id="item_tulisan" style="color: #1D7997; text-align: justify;">
@@ -385,7 +387,8 @@
                                 <i class="	fas fa-check-circle fa-6x"></i>
                             </div>
 
-                            <div style="margin-top: 5%" class="card-body" style=" padding-left: 10%;padding-right: 10%;">
+                            <div style="margin-top: 5%" class="card-body"
+                                style=" padding-left: 10%;padding-right: 10%;">
                                 <p id="tittle_card" class="card-tittle">Status Tiket Masuk</p>
                                 <p id="isi_cardss" class="card-text"> Tersedia </p>
                             </div>
@@ -396,83 +399,83 @@
                         {{-- End Card --}}
                     </div>
                     @auth
-                    <div class="col-md-4">
-                        {{-- Start Card --}}
+                        <div class="col-md-4">
+                            {{-- Start Card --}}
 
-                        <div class="card rounded-3" style="95%;height: 17rem;">
-                            <div class="warna card-header">
+                            <div class="card rounded-3" style="95%;height: 17rem;">
+                                <div class="warna card-header">
+                                </div>
+
+                                <div class="ca card-header">
+                                    <i class="fas fa-edit fa-6x"></i>
+                                </div>
+
+                                <div style="margin-top: 5%" class="card-body">
+                                    <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
+                                    {{-- @if ($count) --}}
+                                    <button type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                        class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                        data-bs-target="#PesanModal">
+                                        Pesan
+                                    </button>
+                                    {{-- @endif --}}
+                                </div>
+
                             </div>
 
-                            <div class="ca card-header">
-                                <i class="fas fa-edit fa-6x"></i>
-                            </div>
-                        
-                            <div style="margin-top: 5%" class="card-body">
-                                <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
-                                {{-- @if ($count) --}}
-                                <button type="button" style=" padding-left: 10%;padding-right: 10%;"
-                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
-                                    data-bs-target="#PesanModal">
-                                    Pesan
-                                </button>
-                                {{-- @endif --}}
-                            </div>
-                           
+                            {{-- End Card --}}
                         </div>
-
-                        {{-- End Card --}}
-                    </div>
                     @else
-                    <div class="col-md-4">
-                        {{-- Start Card --}}
+                        <div class="col-md-4">
+                            {{-- Start Card --}}
 
-                        <div class="card rounded-3" style="width: 20rem;height: 17rem;">
-                            <div class="warna card-header">
+                            <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                                <div class="warna card-header">
+                                </div>
+
+                                <div class="ca card-header">
+                                    <i class="fas fa-edit fa-6x"></i>
+                                </div>
+
+                                <div style="margin-top: 5%" class="card-body">
+                                    <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
+                                    <button type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                        class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                        data-bs-target="#loginModal">
+                                        Pesan
+                                    </button>
+                                </div>
                             </div>
 
-                            <div class="ca card-header">
-                                <i class="fas fa-edit fa-6x"></i>
-                            </div>
-
-                            <div style="margin-top: 5%" class="card-body">
-                                <p id="tittle_card" class="card-tittle">Pesan Tiket Masuk Online</p>
-                                <button type="button" style=" padding-left: 10%;padding-right: 10%;"
-                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
-                                    data-bs-target="#loginModal">
-                                    Pesan
-                                </button>
-                            </div>
+                            {{-- End Card --}}
                         </div>
-
-                        {{-- End Card --}}
-                    </div>
                     @endauth
 
                     @auth
-                    <div class="col-md-12">
-                        {{-- Start Card --}}
+                        <div class="col-md-12">
+                            {{-- Start Card --}}
 
-                        <div class="card rounded-3" style="width: 20rem;height: 17rem;">
-                            <div class="warna card-header">
+                            <div class="card rounded-3" style="width: 20rem;height: 17rem;">
+                                <div class="warna card-header">
+                                </div>
+
+                                <div class="ca card-header">
+                                    <i class="fas fa-history fa-6x"></i>
+                                </div>
+
+                                <div style="margin-top: 5%" class="card-body">
+                                    <p id="tittle_card" class="card-tittle">Riwayat Pemesanan Tiket</p>
+                                    <button type="button" style=" padding-left: 10%;padding-right: 10%;"
+                                        class="btn btn-primary rounded-pill" data-bs-toggle="modal"
+                                        data-bs-target="#RiwayatModal">
+                                        Cek Riwayat Pemesanan
+                                    </button>
+                                </div>
                             </div>
 
-                            <div class="ca card-header">
-                                <i class="fas fa-history fa-6x"></i>
-                            </div>
 
-                            <div style="margin-top: 5%" class="card-body">
-                                <p id="tittle_card" class="card-tittle">Riwayat Pemesanan Tiket</p>
-                                <button type="button" style=" padding-left: 10%;padding-right: 10%;"
-                                    class="btn btn-primary rounded-pill" data-bs-toggle="modal"
-                                    data-bs-target="#RiwayatModal">
-                                    Cek Riwayat Pemesanan
-                                </button>
-                            </div>
+                            {{-- End Card --}}
                         </div>
-                        
-
-                        {{-- End Card --}}
-                    </div>
                     @endauth
 
                 </div>
@@ -481,7 +484,7 @@
 
     </section>
     {{-- end konten tiket --}}
-  
+
 
     {{-- Konten UMKM --}}
 
@@ -500,22 +503,24 @@
                     hasil-hasil pembangunan.</p>
 
                 <div class="row align-items-start">
-                @foreach ($kat as $kat)
-                    <div class="col-md-4"> a
-                        {{-- start --}}
-                        <a style="text-decoration: none;" href="{{ url('umkm') }}/ {{ $kat->id_kat_umkm }}">
+                    @foreach ($kat as $kat)
+                        <div class="col-md-4"> a
+                            {{-- start --}}
+                            <a style="text-decoration: none;" href="{{ url('umkm') }}/ {{ $kat->id_kat_umkm }}">
 
-                            <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
-                                <img src="{!! asset('images/'.$kat->gambar.'') !!}" class="card-img-top" alt="UMKM_{{$kat->nama}}">
-                                <div class="card-body">
-                                    <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">{{$kat->nama}}</p>
+                                <div class="card rounded-3" style="width: 18rem; height: 15rem; padding: 10%">
+                                    <img src="{!! asset('images/' . $kat->gambar . '') !!}" class="card-img-top"
+                                        alt="UMKM_{{ $kat->nama }}">
+                                    <div class="card-body">
+                                        <p id="tittle_card" style="color:#167594;margin-top: 4%" class="card-text">
+                                            {{ $kat->nama }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        {{-- end --}}
-                    </div>
+                            </a>
+                            {{-- end --}}
+                        </div>
                     @endforeach
-                    
+
             </center>
 
         </div>
@@ -538,53 +543,62 @@
             </center>
 
             <div class="row align-items-start">
-            @foreach($wahana as $wahana)
-            @php
-                $count = 0;
-                $count ++;
-            @endphp
-            {{-- <?php if ($count % 2 == 0) {?> --}}
-                {{-- start wahana --}}
-                
-                
-                <div class="col-md-6" style="margin-top: 5%; margin-bottom: 5%; ">
-                    <img id="gambar_wahana" style='max-height:90%; max-width:100%' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
-                </div>
-                <div class="col-md-6" style="margin-top: 5%;">
-                    <h5 id="nama_web" style="color:#167594; margin-bottom: 5%">{{$wahana->nama}}</h5>
-                    
-                    <p id="item_tulisan" style="color:#167594;font-size: 105%; margin-right:5%; text-align: justify;"> {{$wahana->deskripsi}} </p>
+                @foreach ($wahana as $wahana)
+                    @php
+                        $count = 0;
+                        $count++;
+                    @endphp
+                    {{-- <?php if ($count % 2 == 0) {?> --}}
+                    {{-- start wahana --}}
+
+
+                    <div class="col-md-6" style="margin-top: 5%; margin-bottom: 5%; ">
+                        <img id="gambar_wahana" style='max-height:90%; max-width:100%' src="{!! asset('images/' . $wahana->gambar . '') !!}"
+                            class="img-fluid" alt="Speedboat">
+                    </div>
+                    <div class="col-md-6" style="margin-top: 5%;">
+                        <h5 id="nama_web" style="color:#167594; margin-bottom: 5%">{{ $wahana->nama }}</h5>
+
+                        <p id="item_tulisan"
+                            style="color:#167594;font-size: 105%; margin-right:5%; text-align: justify;">
+                            {{ $wahana->deskripsi }} </p>
+                        @php
+                            $cost2 = '';
+                            if ($wahana->nama_harga2 != null) {
+                                $cost2 = $wahana->nama_harga2 . ': Rp. ' . $wahana->harga2 . '.000';
+                            }
+                        @endphp
+                        <p id="item_tulisan"
+                            style="color:#167594;font-size: 105%; margin-right:5%: text-align: justify;">
+                            {{ $wahana->nama_harga }} : Rp. {{ $wahana->harga }}.000
+                            <br> {{ $cost2 }}
+                        </p>
+                    </div>
+
+                    {{-- End wahana --}}
+
+                    {{-- <?php } else { ?> --}}
+
+                    <!-- {{-- start wahana2 --}}
+                <div style="margin-top: 5%" class="col-md-6">
+                    <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">{{ $wahana->nama }}</h5>
+                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;">{{ $wahana->deskripsi }} </p>
                     @php
                         $cost2 = '';
-                        if ($wahana->nama_harga2 != null) $cost2 = $wahana->nama_harga2 .": Rp. ". $wahana->harga2 .".000";
+                        if ($wahana->nama_harga2 != null) {
+                            $cost2 = $wahana->nama_harga2 . ': Rp. ' . $wahana->harga2 . '.000';
+                        }
                     @endphp
-                    <p id="item_tulisan" style="color:#167594;font-size: 105%; margin-right:5%: text-align: justify;"> {{$wahana->nama_harga}} : Rp. {{$wahana->harga}}.000 
-                                                                                                <br> {{$cost2}} </p>  
-                </div>
-
-                {{-- End wahana --}}
-
-                {{-- 
-                <?php } else { ?>--}}
-                
-                <!-- {{--start wahana2--}}
-                <div style="margin-top: 5%" class="col-md-6">
-                    <h5 id="nama_web"  style="color:#167594; margin-bottom: 5%">{{$wahana->nama}}</h5>
-                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;">{{$wahana->deskripsi}} </p>
-                    @php
-                        $cost2 = '';
-                        if ($wahana->nama_harga2 != null) $cost2 = $wahana->nama_harga2 .": Rp. ". $wahana->harga2 .".000";
-                    @endphp
-                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> {{$wahana->nama_harga}} : Rp. {{$wahana->harga}}.000
-                                                                                                        <br> {{$cost2}} </p>  
+                    <p id="item_tulisan" style="color:#167594;font-size: 16px; text-align: justify;"> {{ $wahana->nama_harga }} : Rp. {{ $wahana->harga }}.000
+                                                                                                        <br> {{ $cost2 }} </p>
                 </div>
 
                 <div style="margin-top: 5%" class="col-md-6">
-                    <img id="gambar_wahana" style='height:300px; max-width:450px' src="{!! asset('images/'.$wahana->gambar.'') !!}" class="img-fluid" alt="Speedboat">
+                    <img id="gambar_wahana" style='height:300px; max-width:450px' src="{!! asset('images/' . $wahana->gambar . '') !!}" class="img-fluid" alt="Speedboat">
                 </div>
-                {{--end wahana2--}} -->
-                {{-- <?php ; } ?> --}}
-            @endforeach
+                {{-- end wahana2 --}} -->
+                    {{-- <?php ; } ?> --}}
+                @endforeach
 
 
             </div>
@@ -603,7 +617,8 @@
                     <p><i style="color: white;margin-left: 10px" class="fa fa-phone"></i><a></a> +628123456xx</p>
                     <p href="https://www.instagram.com/gotelagasarangan/"><i style="color: white;margin-left: 10px"
                             class="fa fa-instagram"></i> @gotelagasarangan_</p>
-                    <p><i style="color: white;margin-left: 10px" class="fa fa-envelope"></i> gotelagasarangan@gmail.com
+                    <p><i style="color: white;margin-left: 10px" class="fa fa-envelope"></i>
+                        gotelagasarangan@gmail.com
                     </p>
                     <p><i style="color: white;margin-left: 10px" class="fa fa-facebook"></i> gotelagasarangan</p>
 
@@ -622,7 +637,7 @@
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">MAMONIR</h6>
                     <p>Kami Membantu wisata anda, dimanapun dan kapanpun.</p>
 
-                    <form>
+                    {{-- <form>
 
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label text-white">Saran dan Aduan</label>
@@ -631,9 +646,9 @@
 
                           <input type="button" class="btn btn-primary" value="Kirim saran dan aduan">
 
-                    </form>
+                    </form> --}}
                 </div>
-                
+
                 <!-- <div class="col-md-6">
                     <h6 style="color: #FFF;margin-bottom: 3%" id="nama_web">Contact Us</h6>
                     <div class="row">

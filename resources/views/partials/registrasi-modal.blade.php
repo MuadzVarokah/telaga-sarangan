@@ -55,7 +55,7 @@
                         <button type="submit" class="btn btn-primary" style="width: 100%">Registrasi</button>
                     </center>
                 </form>
-                <center>
+                <center style="color: black">
                     Sudah punya akun? Silahkan <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
                 </center>
             </div>
