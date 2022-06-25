@@ -19,9 +19,11 @@ class DashboardController extends Controller
         //->join ('harga', 'harga.id_wahana','=','wahana.id_wahana')
         ->select('nama','deskripsi','gambar','nama_harga','harga','nama_harga2','harga2')
         ->distinct()
+        ->orderby('nama')
         ->get();
         $wahana = $wahana->unique('deskripsi');
         $kat = DB::table('kat_umkm')
+        ->orderby('nama')
         ->get();
         //$wahana = array_slice($wahana->values()->all(), 0, 5, true);
         // dd($wahana);
