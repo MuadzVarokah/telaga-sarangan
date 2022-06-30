@@ -17,10 +17,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $now = Carbon::now();
-        $weekStartDate = $now->startOfWeek()->format('Y-m-d H:i:s');
-        $weekEndDate = $now->endOfWeek()->format('Y-m-d H:i:s');
-        $end = $now->endOfWeek(Carbon::SUNDAY);
+        $now = Carbon::now(); //nentuin waktu saat ini
+        $weekStartDate = $now->startOfWeek()->format('Y-m-d H:i:s'); //ngambil awal dari minggu
+        $weekEndDate = $now->endOfWeek()->format('Y-m-d H:i:s'); //ngambil akhir dari minggu
+        $end = $now->endOfWeek(Carbon::SUNDAY); //nentuin hari akhir dari 1 minggu (akhir = minggu(sunday), awal = senin)
+        $lastMonth =  $now->subMonth()->format('Y-m-d H:i:s'); //ngambil 'bulan lalu'
 
         $tiket = DB::table('tiket')->get();
         $hitung = DB::table('tiket')->where('status', 'sudah dibayar')->pluck('jumlah_tiket');
@@ -31,7 +32,6 @@ class AdminController extends Controller
             ->where('status', 'sudah dibayar')
             ->where('waktu_kunjungan', '>', $weekStartDate)
             ->get();
-        $lastMonth =  $now->subMonth()->format('Y-m-d H:i:s');
         $after = DB::table('tiket')->where('waktu_kunjungan', '>', $lastMonth)->count();
         $before = DB::table('tiket')->where('waktu_kunjungan', '<', $lastMonth)->count();
         $htgumkm = DB::table('umkm')->count();
